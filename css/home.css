@@ -339,3 +339,28 @@
     }
   }
   
+
+/* Final layout fixes: no covered title, reliable project clicks */
+.hero {
+  min-height: 100svh;
+  height: auto;
+  overflow: clip;
+  isolation: isolate;
+  z-index: 2;
+}
+.hero .hero-header-wrapper { position: relative; z-index: 5; width: 100%; }
+.hero .hero-header { z-index: 5 !important; }
+.hero .hero-header h1 { line-height: 1.04; padding-block: .04em .12em; overflow: visible; }
+.hero-img-holder { z-index: 1; min-height: 90svh; height: auto; }
+.hero-img-holder .hero-img { transform: translateY(-18%) scale(.86) rotate(-4deg); }
+.featured-work .featured-images { pointer-events: none; z-index: 0; }
+.featured-work .featured-titles { z-index: 4; }
+.featured-work .featured-title-wrapper { position: relative; z-index: 5; pointer-events: auto; }
+.featured-work .featured-title-wrapper h1,
+.featured-work .featured-title-wrapper a { position: relative; z-index: 6; pointer-events: auto; }
+.featured-work .featured-title-wrapper a { cursor: pointer; }
+@media (max-width: 1000px) {
+  .hero { min-height: 100svh; padding-top: 7.2rem; }
+  .hero .hero-header-wrapper { margin-top: 4rem; }
+  .hero-img-holder { min-height: 72svh; }
+}

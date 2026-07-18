@@ -1,29 +1,34 @@
 # 25041644 - Nguyễn Ngọc Bảo Hoà
 
-Portfolio học phần **Công nghệ số và AI**, được chỉnh sửa trực tiếp từ source `web-development-portfolio-main`.
+Portfolio học phần **Công nghệ số và AI**, được chỉnh trực tiếp từ source `web-development-portfolio`.
 
-## Các phần chính
+## Nội dung chính
 
-- Trang chủ giữ lại hệ thống hiệu ứng GSAP/Lenis của source gốc: chuyển trang nhiều lớp, hero ảnh chuyển động, khu dự án cuộn ngang, card xếp chồng và hiệu ứng footer.
-- 6 trang bài tập riêng trong thư mục `projects/`.
-- Nội dung tiếng Việt được viết lại, sử dụng font hệ thống hỗ trợ đầy đủ dấu tiếng Việt.
-- Ảnh minh chứng đặt sau phần chữ liên quan.
-- Bảng trong báo cáo được dựng lại bằng HTML.
-- PDF gốc nằm trong `public/images/docs/`.
+- Trang chủ theo concept **Hành trình qua ngôn ngữ và khung hình**.
+- Khu vực **Dự án** hiển thị đủ 6 bài tập dưới dạng card có thể bấm.
+- Mỗi bài có một trang HTML riêng trong thư mục `projects/`.
+- Nội dung từng bài được trình bày theo mạch của PDF gốc: chữ ở trên, ảnh liên quan ở ngay dưới.
+- Bảng trong tài liệu được dựng lại bằng bảng HTML.
+- Font ưu tiên `Be Vietnam Pro` và `Noto Serif`, kèm fallback an toàn cho tiếng Việt và chữ Hán.
+- Workflow GitHub Pages nằm tại `.github/workflows/static.yml`.
 
 ## Chạy thử
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-## Build
+## Kiểm tra bản production
 
 ```bash
 npm run build
+npm run preview
 ```
 
 ## Deploy GitHub Pages
 
-Source đã có workflow `.github/workflows/static.yml`. Đẩy code lên nhánh `main`, sau đó chọn **Settings → Pages → Source: GitHub Actions**.
+1. Push source lên nhánh `main`.
+2. Vào **Settings → Pages**.
+3. Chọn **GitHub Actions** tại mục Source.
+4. Workflow sẽ cài dependency, build Vite và deploy thư mục `dist`.

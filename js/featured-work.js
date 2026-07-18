@@ -80,3 +80,24 @@ document.addEventListener("DOMContentLoaded", () => {
   init();
   window.addEventListener("resize", init);
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".featured-title-wrapper").forEach((wrapper) => {
+    const link = wrapper.querySelector("a[href]");
+    if (!link) return;
+    wrapper.setAttribute("role", "link");
+    wrapper.setAttribute("tabindex", "0");
+    wrapper.style.cursor = "pointer";
+    wrapper.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      link.click();
+    });
+    wrapper.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        link.click();
+      }
+    });
+  });
+});

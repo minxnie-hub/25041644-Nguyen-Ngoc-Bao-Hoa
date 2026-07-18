@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfolio học phần Công nghệ số và AI của Nguyễn Ngọc Bảo Hoà, sinh viên ngành Ngôn ngữ Trung Quốc, ULIS - ĐHQGHN." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif:wght@600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
   <title>Nguyễn Ngọc Bảo Hoà | Portfolio CNS & AI</title>
   <link rel="icon" href="./images/global/site-icon.png" />
   <link rel="stylesheet" href="./css/transition.css" />
@@ -128,19 +132,40 @@
         </div>
       </section>
 
-      <section class="featured-work" id="projects">
-        <div class="featured-images"></div>
-        <div class="featured-titles">
-          <div class="featured-title-wrapper"><h1 class="featured-title">06 bài tập tiêu biểu</h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-1.jpg" alt="Bài 1" /></div><h1 class="featured-title"><a href="./projects/project-1.html">01 · Quản lý tệp tin</a></h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-2.jpg" alt="Bài 2" /></div><h1 class="featured-title"><a href="./projects/project-2.html">02 · Thông tin học thuật</a></h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-3.jpg" alt="Bài 3" /></div><h1 class="featured-title"><a href="./projects/project-3.html">03 · Viết prompt hiệu quả</a></h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-4.jpg" alt="Bài 4" /></div><h1 class="featured-title"><a href="./projects/project-4.html">04 · Hợp tác trực tuyến</a></h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-5.jpg" alt="Bài 5" /></div><h1 class="featured-title"><a href="./projects/project-5.html">05 · Sáng tạo cùng AI</a></h1></div>
-          <div class="featured-title-wrapper"><div class="featured-title-img"><img src="./images/work-items/work-item-6.jpg" alt="Bài 6" /></div><h1 class="featured-title"><a href="./projects/project-6.html">06 · AI có trách nhiệm</a></h1></div>
+      <section class="project-archive" id="projects">
+        <div class="project-archive-header">
+          <div>
+            <p class="mn">Dự án học phần · 06 bài tập</p>
+            <h1>Toàn bộ bài tập<br />trong portfolio</h1>
+          </div>
+          <p class="project-archive-intro">Mỗi thẻ bên dưới dẫn tới một trang chi tiết riêng. Nội dung trong từng trang được trình bày lại theo đúng mạch của báo cáo gốc: phần chữ nằm trước, ảnh minh chứng nằm ngay sau nội dung liên quan và bảng biểu được dựng lại bằng HTML.</p>
         </div>
-        <div class="featured-work-indicator"></div>
-        <div class="featured-work-footer"><p class="mn">Project archive [ 06 ]</p><p class="mn">///////////////////</p><p class="mn">Bấm vào tên bài để xem chi tiết</p></div>
+        <div class="project-card-grid">
+          <a class="home-project-card" href="./projects/project-1.html" aria-label="Mở Bài 1 - Thao tác cơ bản với tệp tin và thư mục">
+            <div class="home-project-image"><img src="./images/work-items/work-item-1.jpg" alt="Bài 1 - Quản lý tệp tin" /></div>
+            <div class="home-project-copy"><span class="project-card-number">01</span><h2>Thao tác cơ bản với tệp tin và thư mục</h2><p>Thực hành tạo, đổi tên, sao chép, di chuyển, xoá và khôi phục tệp theo từng bước.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+          <a class="home-project-card" href="./projects/project-2.html" aria-label="Mở Bài 2 - Tìm kiếm và đánh giá thông tin học thuật">
+            <div class="home-project-image"><img src="./images/work-items/work-item-2.jpg" alt="Bài 2 - Thông tin học thuật" /></div>
+            <div class="home-project-copy"><span class="project-card-number">02</span><h2>Tìm kiếm và đánh giá thông tin học thuật</h2><p>Thu thập tài liệu, đánh giá độ tin cậy của nguồn và trình bày bảng tổng hợp.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+          <a class="home-project-card" href="./projects/project-3.html" aria-label="Mở Bài 3 - Viết prompt hiệu quả cho các tác vụ">
+            <div class="home-project-image"><img src="./images/work-items/work-item-3.jpg" alt="Bài 3 - Viết prompt hiệu quả" /></div>
+            <div class="home-project-copy"><span class="project-card-number">03</span><h2>Viết prompt hiệu quả cho các tác vụ</h2><p>So sánh prompt cơ bản, cải tiến và nâng cao qua ba nhóm nhiệm vụ học tập.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+          <a class="home-project-card" href="./projects/project-4.html" aria-label="Mở Bài 4 - Sử dụng công cụ hợp tác trực tuyến">
+            <div class="home-project-image"><img src="./images/work-items/work-item-4.jpg" alt="Bài 4 - Hợp tác trực tuyến" /></div>
+            <div class="home-project-copy"><span class="project-card-number">04</span><h2>Sử dụng công cụ hợp tác trực tuyến</h2><p>Minh chứng quá trình quản lý nhiệm vụ, lưu trữ tài liệu và phối hợp cùng nhóm.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+          <a class="home-project-card" href="./projects/project-5.html" aria-label="Mở Bài 5 - Sử dụng AI tạo sinh để sáng tạo nội dung">
+            <div class="home-project-image"><img src="./images/work-items/work-item-5.jpg" alt="Bài 5 - Sáng tạo nội dung cùng AI" /></div>
+            <div class="home-project-copy"><span class="project-card-number">05</span><h2>Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung</h2><p>Kết hợp ChatGPT, DALL·E và Canva AI để xây dựng một infographic học tập.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+          <a class="home-project-card" href="./projects/project-6.html" aria-label="Mở Bài 6 - Sử dụng AI có trách nhiệm">
+            <div class="home-project-image"><img src="./images/work-items/work-item-6.jpg" alt="Bài 6 - Sử dụng AI có trách nhiệm" /></div>
+            <div class="home-project-copy"><span class="project-card-number">06</span><h2>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h2><p>Phân tích chính sách, đạo đức học thuật và xây dựng bộ nguyên tắc cá nhân.</p><span class="project-card-link">Xem bài tập <b>↗</b></span></div>
+          </a>
+        </div>
       </section>
 
       <section class="services-header">
@@ -194,7 +219,6 @@
   <script type="module" src="./js/lenis-scroll.js"></script>
   <script type="module" src="./js/menu.js"></script>
   <script type="module" src="./js/hero.js"></script>
-  <script type="module" src="./js/featured-work.js"></script>
   <script type="module" src="./js/services.js"></script>
   <script type="module" src="./js/footer.js"></script>
   <script type="module" src="./js/about.js"></script>

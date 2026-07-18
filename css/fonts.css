@@ -1,6 +1,6 @@
-/* Vietnamese-safe font stacks. No bundled font files are required. */
+/* Stable typography for Vietnamese and Chinese text. */
 :root {
-  --font-display: Georgia, "Times New Roman", "Noto Serif", serif;
-  --font-body: Arial, "Segoe UI", Tahoma, sans-serif;
-  --font-mono: "Courier New", Courier, monospace;
+  --font-display: "Noto Serif", Georgia, "Times New Roman", "Noto Serif SC", "Microsoft YaHei", serif;
+  --font-body: "Be Vietnam Pro", "Segoe UI", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "Be Vietnam Pro", "Segoe UI", Arial, "Noto Sans SC", sans-serif;
 }
