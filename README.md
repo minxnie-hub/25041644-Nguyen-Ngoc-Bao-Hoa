@@ -32,3 +32,10 @@ npm run preview
 2. Vào **Settings → Pages**.
 3. Chọn **GitHub Actions** tại mục Source.
 4. Workflow sẽ cài dependency, build Vite và deploy thư mục `dist`.
+
+## V5 Motion Restore
+
+- Khôi phục page transition, smooth scroll desktop, hero reveal, parallax tài liệu, chuyển động phần giới thiệu, project-card reveal, service-card reveal và footer burst.
+- Không dùng pinSpacing=false hoặc chuyển động biên độ lớn làm các khối đè lên nhau.
+- Menu hỗ trợ điều hướng anchor và chuyển trang sau khi đóng overlay.
+- Typography dùng Be Vietnam Pro để bảo đảm dấu tiếng Việt.

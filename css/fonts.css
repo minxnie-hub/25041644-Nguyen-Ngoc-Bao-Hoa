@@ -1,6 +1,7 @@
-/* Stable typography for Vietnamese and Chinese text. */
+/* Typography chosen for reliable Vietnamese and CJK rendering. */
 :root {
-  --font-display: "Be Vietnam Pro", "Segoe UI", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  --font-body: "Be Vietnam Pro", "Segoe UI", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
-  --font-mono: "Be Vietnam Pro", "Segoe UI", Arial, "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-display: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  --font-body: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  --font-mono: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  --font-cjk: "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
