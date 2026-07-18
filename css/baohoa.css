@@ -311,3 +311,373 @@ footer .footer-header h1 { line-height: 1.08; padding-bottom: .08em; }
   .services .service-card-img { width: 100%; min-height: 0; aspect-ratio: 16 / 9; }
   .services .service-card-content h1 { max-width: none; }
 }
+
+
+/* =========================================================
+   V4 STABILITY PASS — no covered text, no colliding objects
+   ========================================================= */
+.transition { display: none !important; }
+html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
+h1, h2, h3,
+.hero .hero-header h1,
+.about-hero .about-hero-header h1,
+.services-header .services-header-title h1,
+.services .service-card-content h1,
+.summary-kicker h1,
+footer .footer-header h1 {
+  font-family: var(--font-display) !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.06 !important;
+  overflow: visible !important;
+  text-transform: none !important;
+  word-break: normal !important;
+  text-wrap: balance;
+}
+
+/* Navigation: predictable overlay and real clickable links */
+nav {
+  z-index: 210 !important;
+  padding: 1.4rem 2rem !important;
+  overflow: visible !important;
+}
+.logo-container,
+.menu-toggle-btn {
+  min-width: 62px;
+  min-height: 42px;
+  display: grid;
+  place-items: center;
+  background: rgba(251,248,241,.96) !important;
+  border: 1px solid var(--fg) !important;
+  box-shadow: 4px 4px 0 rgba(32,49,44,.16);
+}
+.menu-toggle-btn-wrapper {
+  height: auto !important;
+  clip-path: none !important;
+  display: block !important;
+}
+.menu-toggle-btn .close-label { display: none; }
+.menu-toggle-btn.menu-open .open-label { display: none; }
+.menu-toggle-btn.menu-open .close-label { display: block; }
+.nav-overlay {
+  z-index: 200 !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  display: grid !important;
+  grid-template-rows: 1fr auto;
+  background: rgba(157,184,173,.98) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .22s ease, visibility .22s ease;
+}
+.nav-overlay.is-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+.nav-overlay .nav-items {
+  position: static !important;
+  transform: none !important;
+  align-self: center;
+  justify-self: center;
+  display: flex !important;
+  flex-direction: column;
+  gap: .75rem !important;
+  padding: 7rem 1.25rem 2rem;
+}
+.nav-overlay .nav-items .nav-item {
+  transform: none !important;
+  opacity: 1 !important;
+  border: 1px solid rgba(32,49,44,.18);
+  box-shadow: none;
+}
+.nav-overlay .nav-items .nav-item p {
+  font-family: var(--font-body) !important;
+  font-style: normal !important;
+  font-size: clamp(1.25rem, 3vw, 2rem) !important;
+}
+.nav-overlay .nav-items .nav-item p a {
+  min-width: 210px;
+  text-align: center;
+  padding: .62rem 1.1rem !important;
+}
+.nav-overlay .nav-footer {
+  position: static !important;
+  padding: 1.25rem 2rem 1.5rem !important;
+}
+.nav-overlay .nav-footer-item-header,
+.nav-overlay .nav-footer-item-copy {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* Opening hero: readable name, no clipping */
+.hero {
+  min-height: 100dvh !important;
+  height: auto !important;
+  padding: 8.5rem 2rem 5.5rem !important;
+  overflow: hidden !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+.hero-kicker {
+  top: 6.8rem !important;
+  left: 2rem !important;
+  max-width: min(27rem, 34vw) !important;
+  z-index: 8 !important;
+}
+.hero-stamp {
+  top: 7rem !important;
+  right: 2.2rem !important;
+  width: 88px !important;
+  font-size: 1rem !important;
+}
+.hero .hero-header-wrapper {
+  width: min(1320px, 100%) !important;
+  margin: 5.8rem auto 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: .05rem !important;
+}
+.hero .hero-header,
+.hero .hero-header.hero-header-1,
+.hero .hero-header.hero-header-2 {
+  transform: none !important;
+  width: 100%;
+  position: relative !important;
+  z-index: 5 !important;
+}
+.hero .hero-header h1 {
+  font-size: clamp(4rem, 9.2vw, 9.8rem) !important;
+  white-space: normal !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: .06em .04em .12em !important;
+}
+.hero .hero-footer { z-index: 9 !important; }
+
+/* The rotating PDF card becomes a calm standalone visual section */
+.hero-img-holder {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: clamp(4rem, 8vw, 7rem) 2rem !important;
+  display: grid !important;
+  place-items: center !important;
+  background: var(--paper);
+  overflow: hidden !important;
+}
+.hero-img-holder .hero-img {
+  position: relative !important;
+  width: min(880px, 88vw) !important;
+  height: auto !important;
+  aspect-ratio: 16 / 10 !important;
+  margin: 0 auto !important;
+  transform: none !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 12px 12px 0 rgba(32,49,44,.18) !important;
+}
+.hero-img-holder .hero-img img {
+  object-fit: contain !important;
+  background: #fff;
+}
+
+/* About section becomes a real grid; portrait never covers copy */
+.about-hero {
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: clamp(6rem, 9vw, 9rem) clamp(1.5rem, 5vw, 5rem) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 340px) !important;
+  grid-template-areas: "heading portrait" "bio portrait" !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 2rem 4rem !important;
+  overflow: visible !important;
+}
+.about-hero .about-hero-header {
+  grid-area: heading;
+  text-align: left !important;
+  align-self: end;
+}
+.about-hero .about-hero-header h1 {
+  font-size: clamp(3rem, 6.2vw, 6.6rem) !important;
+}
+.about-hero .about-hero-bio {
+  grid-area: bio;
+  width: 100% !important;
+  max-width: 760px;
+  text-align: left !important;
+  gap: 1.1rem !important;
+  align-self: start;
+}
+.about-hero .about-hero-portrait {
+  grid-area: portrait;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  max-width: 330px !important;
+  transform: none !important;
+  aspect-ratio: 4 / 5 !important;
+  justify-self: center;
+  border-radius: 1.25rem !important;
+  box-shadow: 10px 10px 0 var(--accent1) !important;
+  overflow: hidden !important;
+}
+.about-hero .about-hero-portrait img {
+  position: static !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  background: white;
+}
+
+/* Decorative labels stay out of text flow */
+.about-copy { min-height: 0 !important; overflow: hidden !important; }
+.about-copy .about-copy-content {
+  width: min(900px, 100%) !important;
+  box-shadow: 9px 9px 0 rgba(32,49,44,.35) !important;
+}
+.about-copy .tag { display: none !important; }
+
+/* Static, separated capability cards — no overlap at card 04 */
+.services-header {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: clamp(6rem, 9vw, 9rem) 2rem !important;
+}
+.services-header .services-header-title { margin-bottom: 1.5rem !important; }
+.services-header .services-header-title h1 {
+  font-size: clamp(2.8rem, 6vw, 6rem) !important;
+}
+.services {
+  position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  padding: 0 2rem clamp(6rem, 9vw, 9rem) !important;
+  overflow: visible !important;
+}
+.services .service-card {
+  position: relative !important;
+  min-height: 0 !important;
+  height: auto !important;
+  opacity: 1 !important;
+  transform: none !important;
+  margin: 0 !important;
+  z-index: auto !important;
+}
+.services .service-card-inner {
+  width: min(1320px, calc(100vw - 4rem)) !important;
+  min-height: 420px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  padding: clamp(1.4rem, 3vw, 2.4rem) !important;
+  gap: clamp(1.5rem, 4vw, 4rem) !important;
+  overflow: hidden !important;
+  transform: none !important;
+  will-change: auto !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 8px 8px 0 rgba(32,49,44,.35) !important;
+}
+.services .service-card-content {
+  min-width: 0 !important;
+  justify-content: center;
+}
+.services .service-card-content h1 {
+  font-size: clamp(2.7rem, 5.4vw, 5.6rem) !important;
+  max-width: 13ch !important;
+  margin: .35rem 0 !important;
+}
+.services .service-card-copy { max-width: 58ch !important; }
+.services .service-card-img {
+  flex: 0 0 min(360px, 31vw) !important;
+  width: min(360px, 31vw) !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 5 !important;
+  border-radius: 1rem !important;
+}
+.services .service-card-img img { object-fit: contain !important; background: white; }
+
+/* Less motion, less jank */
+.home-project-card,
+.contact-cta .contact-button,
+.home-project-image img { transition-duration: .18s !important; }
+.explosion-container { display: none !important; }
+
+@media (max-width: 1000px) {
+  nav { padding: 1rem !important; }
+  .hero {
+    min-height: 100dvh !important;
+    padding: 7.2rem 1rem 5.5rem !important;
+  }
+  .hero-kicker {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    max-width: 100% !important;
+    align-self: stretch;
+    margin-bottom: 1.3rem;
+  }
+  .hero .hero-header-wrapper { margin: 0 auto !important; }
+  .hero .hero-header h1 {
+    font-size: clamp(3rem, 13vw, 6.4rem) !important;
+  }
+  .hero .hero-footer { padding: 1rem !important; }
+  .hero-img-holder { padding-inline: 1rem !important; }
+  .hero-img-holder .hero-img { width: min(920px, 96vw) !important; }
+  .about-hero {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "heading" "portrait" "bio" !important;
+    gap: 1.5rem !important;
+  }
+  .about-hero .about-hero-header,
+  .about-hero .about-hero-bio { text-align: center !important; }
+  .about-hero .about-hero-portrait { max-width: 250px !important; }
+  .services { padding-inline: 1rem !important; }
+  .services .service-card-inner {
+    width: 100% !important;
+    min-height: 0 !important;
+    flex-direction: column !important;
+    text-align: left !important;
+  }
+  .services .service-card-content h1 { max-width: none !important; }
+  .services .service-card-img {
+    width: 100% !important;
+    flex-basis: auto !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+  .nav-overlay .nav-footer { display: none !important; }
+}
+
+@media (max-width: 620px) {
+  .hero .hero-footer-tags { display: none !important; }
+  .hero .hero-footer-scroll-down { left: 1rem !important; transform: none !important; }
+  .about-copy { padding-inline: 1rem !important; }
+  .stats { padding-inline: 1rem !important; }
+  .project-archive { padding-inline: 1rem !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+.about-hero, .about-copy, .stats-row { opacity: 1; transform: none; }
+/* Logo contrast and fully opaque menu surface */
+nav .logo { padding: 0 !important; background: transparent !important; }
+.logo-container a { color: var(--fg) !important; }
+.nav-overlay { background: var(--accent3) !important; }
