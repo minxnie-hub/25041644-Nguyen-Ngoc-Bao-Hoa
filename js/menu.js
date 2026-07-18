@@ -7,99 +7,167 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const openLabel = button.querySelector(".open-label");
   const closeLabel = button.querySelector(".close-label");
-  const revealItems = overlay.querySelectorAll(".nav-item, .nav-footer-item-header, .nav-footer-item-copy");
-  const links = overlay.querySelectorAll("a[href]");
-  let open = false;
+  const revealItems = overlay.querySelectorAll(
+    ".nav-item, .nav-footer-item-header, .nav-footer-item-copy"
+  );
+
+  let isOpen = false;
   let lockedY = 0;
-  let timeline = null;
+  let activeTimeline = null;
+
+  const canonicalPath = (pathname) => {
+    const withoutIndex = pathname.replace(/\/index\.html$/i, "/");
+    return withoutIndex.length > 1 ? withoutIndex.replace(/\/+$/, "") : withoutIndex;
+  };
 
   gsap.set(overlay, { autoAlpha: 0, pointerEvents: "none" });
-  gsap.set(revealItems, { opacity: 0, y: 28 });
-  gsap.set(closeLabel, { yPercent: 110 });
+  gsap.set(revealItems, { opacity: 0, y: 30 });
+  gsap.set(openLabel, { yPercent: 0 });
+  gsap.set(closeLabel, { yPercent: 120 });
 
   const lockScroll = () => {
-    lockedY = window.scrollY;
-    document.body.style.position = "fixed";
+    lockedY = window.scrollY || window.pageYOffset || 0;
+    document.body.classList.add("menu-scroll-locked");
     document.body.style.top = `-${lockedY}px`;
-    document.body.style.width = "100%";
   };
 
   const unlockScroll = (restore = true) => {
-    document.body.style.position = "";
+    document.body.classList.remove("menu-scroll-locked");
     document.body.style.top = "";
-    document.body.style.width = "";
     if (restore) window.scrollTo(0, lockedY);
   };
 
-  const openMenu = () => {
-    if (open) return Promise.resolve();
-    open = true;
+  const openMenu = () => new Promise((resolve) => {
+    if (isOpen) {
+      resolve();
+      return;
+    }
+
+    isOpen = true;
     button.classList.add("menu-open");
     button.setAttribute("aria-expanded", "true");
+    button.setAttribute("aria-label", "Đóng menu");
     lockScroll();
-    timeline?.kill();
-    timeline = gsap.timeline();
-    timeline
-      .set(overlay, { pointerEvents: "auto" })
-      .to(overlay, { autoAlpha: 1, duration: .32, ease: "power2.out" }, 0)
-      .to(openLabel, { yPercent: -110, duration: .28, ease: "power2.out" }, 0)
-      .to(closeLabel, { yPercent: 0, duration: .28, ease: "power2.out" }, 0)
-      .to(revealItems, { opacity: 1, y: 0, duration: .58, stagger: .055, ease: "power3.out" }, .08);
-    return new Promise(resolve => timeline.eventCallback("onComplete", resolve));
-  };
 
-  const closeMenu = ({ restore = true } = {}) => {
-    if (!open) return Promise.resolve();
-    open = false;
+    activeTimeline?.kill();
+    activeTimeline = gsap.timeline({
+      onComplete: resolve,
+    });
+
+    activeTimeline
+      .set(overlay, { pointerEvents: "auto" })
+      .to(overlay, { autoAlpha: 1, duration: 0.34, ease: "power2.out" }, 0)
+      .to(openLabel, { yPercent: -120, duration: 0.28, ease: "power2.out" }, 0)
+      .to(closeLabel, { yPercent: 0, duration: 0.28, ease: "power2.out" }, 0)
+      .to(
+        revealItems,
+        { opacity: 1, y: 0, duration: 0.58, stagger: 0.055, ease: "power3.out" },
+        0.08
+      );
+  });
+
+  const closeMenu = ({ restore = true } = {}) => new Promise((resolve) => {
+    if (!isOpen) {
+      resolve();
+      return;
+    }
+
+    isOpen = false;
     button.classList.remove("menu-open");
     button.setAttribute("aria-expanded", "false");
-    timeline?.kill();
-    timeline = gsap.timeline({
+    button.setAttribute("aria-label", "Mở menu");
+
+    activeTimeline?.kill();
+    activeTimeline = gsap.timeline({
       onComplete: () => {
-        gsap.set(overlay, { pointerEvents: "none" });
-        gsap.set(revealItems, { opacity: 0, y: 28 });
+        gsap.set(overlay, { autoAlpha: 0, pointerEvents: "none" });
+        gsap.set(revealItems, { opacity: 0, y: 30 });
         unlockScroll(restore);
+        resolve();
       },
     });
-    timeline
-      .to(revealItems, { opacity: 0, y: -18, duration: .22, stagger: .02, ease: "power2.in" }, 0)
-      .to(overlay, { autoAlpha: 0, duration: .28, ease: "power2.inOut" }, .06)
-      .to(openLabel, { yPercent: 0, duration: .25 }, 0)
-      .to(closeLabel, { yPercent: 110, duration: .25 }, 0);
-    return new Promise(resolve => timeline.eventCallback("onComplete", resolve));
-  };
+
+    activeTimeline
+      .to(revealItems, { opacity: 0, y: -16, duration: 0.2, stagger: 0.018, ease: "power2.in" }, 0)
+      .to(overlay, { autoAlpha: 0, duration: 0.28, ease: "power2.inOut" }, 0.04)
+      .to(openLabel, { yPercent: 0, duration: 0.25, ease: "power2.out" }, 0)
+      .to(closeLabel, { yPercent: 120, duration: 0.25, ease: "power2.out" }, 0);
+  });
 
   button.setAttribute("aria-expanded", "false");
-  button.addEventListener("click", () => open ? closeMenu() : openMenu());
+  button.addEventListener("click", () => {
+    if (isOpen) closeMenu();
+    else openMenu();
+  });
 
-  links.forEach(link => {
-    link.addEventListener("click", async event => {
-      if (event.defaultPrevented) return;
-      const raw = link.getAttribute("href");
-      if (!raw) return;
-      const targetUrl = new URL(raw, window.location.href);
-      const sameDocument = targetUrl.origin === location.origin && targetUrl.pathname === location.pathname;
+  // Handle menu links in capture phase so the global page-transition listener
+  // cannot cancel or replace the intended navigation.
+  overlay.addEventListener(
+    "click",
+    async (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) {
+        if (event.target === overlay) closeMenu();
+        return;
+      }
+
+      const rawHref = link.getAttribute("href");
+      if (!rawHref) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+
+      const targetUrl = new URL(rawHref, window.location.href);
+      const sameOrigin = targetUrl.origin === window.location.origin;
+      const sameDocument =
+        sameOrigin && canonicalPath(targetUrl.pathname) === canonicalPath(window.location.pathname);
+
       if (sameDocument && targetUrl.hash) {
-        event.preventDefault();
         const target = document.querySelector(targetUrl.hash);
         await closeMenu({ restore: false });
-        const top = target ? target.getBoundingClientRect().top + window.scrollY - 78 : 0;
-        if (window.__portfolioLenis && target) {
-          window.__portfolioLenis.scrollTo(top, { duration: 1.05 });
+
+        if (target) {
+          const top = target.getBoundingClientRect().top + window.scrollY - 76;
+          if (window.__portfolioLenis) {
+            window.__portfolioLenis.scrollTo(top, { duration: 1.05, force: true });
+          } else {
+            window.scrollTo({ top, behavior: "smooth" });
+          }
+          history.replaceState(null, "", targetUrl.hash);
         } else {
-          window.scrollTo({ top, behavior: "smooth" });
+          window.location.href = targetUrl.href;
         }
-        history.replaceState(null, "", targetUrl.hash);
+        return;
       }
-    });
+
+      if (sameDocument && !targetUrl.hash) {
+        await closeMenu({ restore: false });
+        if (window.__portfolioLenis) {
+          window.__portfolioLenis.scrollTo(0, { duration: 1, force: true });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        history.replaceState(null, "", targetUrl.pathname);
+        return;
+      }
+
+      await closeMenu({ restore: false });
+      if (window.__pageTransition?.cover) {
+        await window.__pageTransition.cover();
+      }
+      window.location.assign(targetUrl.href);
+    },
+    true
+  );
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isOpen) closeMenu();
   });
 
-  overlay.addEventListener("click", event => {
-    if (event.target === overlay) closeMenu();
-  });
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && open) closeMenu();
-  });
-
-  window.__portfolioMenu = { open: openMenu, close: closeMenu, isOpen: () => open };
+  window.__portfolioMenu = {
+    open: openMenu,
+    close: closeMenu,
+    isOpen: () => isOpen,
+  };
 });
