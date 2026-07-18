@@ -1,206 +1,64 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nguyễn Ngọc Bảo Hoà | Portfolio học phần CNS & AI</title>
-<meta name="description" content="Portfolio học phần Công nghệ số và AI của sinh viên Nguyễn Ngọc Bảo Hoà" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif:wght@600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css" />
-
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Bài 03 - Viết prompt hiệu quả cho các tác vụ học tập của Nguyễn Ngọc Bảo Hoà.">
+  <title>Bài 03 | Viết prompt hiệu quả | Nguyễn Ngọc Bảo Hoà</title>
+  <link rel="icon" href="../images/global/site-icon.png">
+  <link rel="stylesheet" href="../css/transition.css"><link rel="stylesheet" href="../css/fonts.css"><link rel="stylesheet" href="../css/globals.css"><link rel="stylesheet" href="../css/menu.css"><link rel="stylesheet" href="../css/project.css"><link rel="stylesheet" href="../css/baohoa.css">
 </head>
 <body>
-  
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../index.html">
-      <div class="brand-mark">H</div>
-      <div class="brand-copy">
-        <strong>Nguyễn Ngọc Bảo Hoà</strong>
-        <small>25041644 • Ngôn ngữ Trung Quốc</small>
-      </div>
-    </a>
-    <button class="menu-button" type="button" data-menu-button>Menu</button>
-    <nav class="nav-links" data-nav-links>
-      <a class="nav-link" href="../index.html#gioi-thieu">Giới thiệu</a><a class="nav-link" href="../index.html#du-an">Dự án</a><a class="nav-link" href="../index.html#tong-ket">Tổng kết</a><a class="nav-link" href="../contact.html">Liên hệ</a>
+  <div class="transition" aria-hidden="true"><div class="transition-overlay overlay-1"></div><div class="transition-overlay overlay-2"></div><div class="transition-overlay overlay-3"></div><div class="transition-overlay overlay-4"></div><div class="transition-overlay overlay-5"></div></div>
+  <div class="page project-page">
+    
+    <nav>
+      <div class="logo"><div class="logo-container"><p class="mn"><a href="../index.html">B ✦ H</a></p></div></div>
+      <div class="menu-toggle-btn" role="button" tabindex="0" aria-label="Mở menu"><div class="menu-toggle-btn-wrapper"><p class="mn open-label">Menu</p><p class="mn close-label">Đóng</p></div></div>
     </nav>
-  </div>
-</header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> <a href="../index.html#du-an">Dự án</a> <span>/</span> <strong>Bài 03</strong></div>
-          <div class="project-number" style="margin-top:1rem;">Bài 03 • Prompt engineering • Learning tasks</div>
-          <h1 class="hero-title" style="font-size:clamp(2.3rem,4.8vw,4.4rem); margin:.8rem 0 1rem;">Viết prompt hiệu quả cho các tác vụ học tập</h1>
-          <p class="hero-copy">Bài làm thử nghiệm cách viết prompt cho ba nhóm nhiệm vụ học tập phổ biến: tóm tắt tài liệu, giải thích khái niệm phức tạp và tạo câu hỏi ôn tập. Mỗi nhiệm vụ đều có ba cấp độ prompt: cơ bản, cải tiến và nâng cao.</p>
-          <div class="info-chips"><span class="chip">Prompt cơ bản</span><span class="chip">Prompt cải tiến</span><span class="chip">Prompt nâng cao</span></div>
-        </div>
-        <div class="page-hero-card">
-          <img src="../assets/img/project-3-thumb.jpg" alt="Tổng quan Viết prompt hiệu quả cho các tác vụ học tập" />
-        </div>
+    <div class="nav-overlay">
+      <div class="nav-items">
+        <div class="nav-item"><p><a href="../index.html">Trang chủ</a></p></div>
+        <div class="nav-item"><p><a href="../index.html#about">Giới thiệu</a></p></div>
+        <div class="nav-item active"><p><a href="../index.html#projects">Dự án</a></p></div>
+        <div class="nav-item"><p><a href="../index.html#summary">Tổng kết</a></p></div>
+        <div class="nav-item"><p><a href="../contact.html">Liên hệ</a></p></div>
       </div>
-    </section>
-
-    <section class="section-space" style="padding-top:1.5rem;">
-      <div class="container content-layout">
-        <div class="content-main">
-          <article class="paper-card">
-            <div class="section-label">Khái quát bài làm</div>
-            <h2 style="margin-top:0;">Ý tưởng và định hướng trình bày</h2>
-            <p>Mục tiêu của bài là hiểu rõ vì sao một prompt cụ thể, có bối cảnh và có cấu trúc thường cho kết quả tốt hơn.</p>
-            <p>Trong phiên bản website, nội dung được viết lại bằng lời văn mạch lạc hơn để tránh lỗi font và giảm cảm giác sao chép nguyên văn từ tài liệu gốc. Mỗi phần đều giữ đúng tinh thần bài làm ban đầu, đồng thời sắp xếp theo nguyên tắc: phần chữ đi trước, ảnh minh chứng đi sau.</p>
-          </article>
-          
-        <article class="paper-card">
-          <div class="section-label">Phần 1</div>
-          <h2 style="margin-top:0;">Tác vụ 1: Tóm tắt và phân tích chủ đề học ngoại ngữ</h2>
-          <p>Ở nhiệm vụ đầu tiên, mình chọn chủ đề khó khăn khi học ngoại ngữ. Từ cùng một đề tài, mình viết ba dạng prompt: một phiên bản rất ngắn, một phiên bản nêu rõ các ý chính cần triển khai và một phiên bản nâng cao có vai trò người trả lời, yêu cầu phân tích nguyên nhân, ví dụ và giải pháp.</p><p>Khi so sánh, mình thấy prompt càng rõ mục tiêu và cấu trúc thì câu trả lời càng logic, ngắn gọn và có chiều sâu hơn. Prompt nâng cao đặc biệt hữu ích khi cần tạo nội dung có tính hướng dẫn hoặc phân tích.</p>
-          <div class="figure-grid">
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-1.png" alt="Minh chứng 1 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 1 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-2.png" alt="Minh chứng 2 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 2 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            </div>
-        </article>
-        
-        <article class="paper-card">
-          <div class="section-label">Phần 2</div>
-          <h2 style="margin-top:0;">Tác vụ 2: Giải thích khái niệm phức tạp</h2>
-          <p>Ở phần này, mình chọn chủ đề bạo lực học đường. Prompt cơ bản chỉ yêu cầu định nghĩa, trong khi prompt cải tiến mở rộng sang nguyên nhân, hậu quả và giải pháp. Với prompt nâng cao, mình thêm bối cảnh người trả lời là giáo viên tâm lý học đường và yêu cầu dẫn ví dụ thực tế.</p><p>Sự khác biệt rõ nhất là mức độ ứng dụng. Prompt cơ bản cho câu trả lời nhanh, nhưng prompt nâng cao cho nội dung giàu ngữ cảnh hơn và phù hợp để dùng trong học tập hoặc thuyết trình.</p>
-          <div class="figure-grid">
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-3.png" alt="Minh chứng 1 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 1 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-4.png" alt="Minh chứng 2 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 2 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            </div>
-        </article>
-        
-        <article class="paper-card">
-          <div class="section-label">Phần 3</div>
-          <h2 style="margin-top:0;">Tác vụ 3: Tạo bộ câu hỏi ôn tập và rút nguyên tắc chung</h2>
-          <p>Nhiệm vụ thứ ba là tạo bộ câu hỏi ôn tập cũng xoay quanh chủ đề bạo lực học đường. Mình tiếp tục áp dụng ba cấp độ prompt để quan sát cách AI thay đổi số lượng câu hỏi, độ rõ ràng của câu lệnh và chất lượng đầu ra.</p><p>Sau thử nghiệm, mình rút ra một số nguyên tắc: nêu rõ mục đích, giới hạn phạm vi, chỉ định dạng đầu ra, cung cấp vai trò cho AI khi cần và bổ sung ví dụ hoặc tiêu chí đánh giá nếu muốn kết quả ổn định hơn.</p>
-          <div class="figure-grid">
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-5.png" alt="Minh chứng 1 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 1 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-6.png" alt="Minh chứng 2 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 2 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-7.png" alt="Minh chứng 3 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 3 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-8.png" alt="Minh chứng 4 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 4 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-9.png" alt="Minh chứng 5 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 5 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-10.png" alt="Minh chứng 6 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 6 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw3/page-11.png" alt="Minh chứng 7 của Viết prompt hiệu quả cho các tác vụ học tập" />
-              <figcaption>Minh chứng 7 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            </div>
-        </article>
-        
-          
-        <article class="paper-card">
-          <div class="section-label">Bảng tổng hợp</div>
-          <h2 style="margin-top:0;">So sánh ba cấp độ prompt</h2>
-          <table class="data-table">
-            <thead><tr><th>Cấp độ</th><th>Đặc điểm</th><th>Hiệu quả điển hình</th></tr></thead>
-            <tbody><tr><td>Cơ bản</td><td>Ngắn gọn, ít ràng buộc, dễ nhập</td><td>Trả lời nhanh nhưng dễ thiếu trọng tâm hoặc trình bày chưa rõ</td></tr><tr><td>Cải tiến</td><td>Nêu rõ nội dung, phạm vi, hình thức trình bày</td><td>Đầu ra rõ hơn, có cấu trúc và bám đề tốt hơn</td></tr><tr><td>Nâng cao</td><td>Có vai trò, bối cảnh, yêu cầu phân tích và ví dụ</td><td>Nội dung sâu hơn, giọng văn phù hợp hơn và có tính ứng dụng cao</td></tr></tbody>
-          </table>
-        </article>
-        
-          <article class="paper-card">
-            <div class="section-label">Kết quả &amp; cảm nhận</div>
-            <h2 style="margin-top:0;">Điều mình rút ra sau bài tập</h2>
-            <p>Bài tập giúp mình hiểu rằng prompt không chỉ là một câu hỏi, mà là cách định hướng suy nghĩ của AI. Viết prompt tốt sẽ giúp tiết kiệm thời gian chỉnh sửa và nâng chất lượng đầu ra rõ rệt.</p>
-          </article>
+      <div class="nav-footer">
+        <div class="nav-footer-item"><div class="nav-footer-item-header"><p class="mn">Portfolio</p></div><div class="nav-footer-item-copy"><p class="mn">Công nghệ số & AI</p></div></div>
+        <div class="nav-footer-item"><div class="nav-footer-item-copy"><p class="mn">行旅与光影</p></div></div>
+        <div class="nav-footer-item"><div class="nav-footer-item-header"><p class="mn">Sinh viên</p></div><div class="nav-footer-item-copy"><p class="mn">Nguyễn Ngọc Bảo Hoà</p></div></div>
+      </div>
+    </div>
+    <main>
+      <section class="project-hero" data-number="03">
+        <div class="project-hero-copy">
+          <div class="project-eyebrow">Bài 03 · Thử nghiệm prompt</div>
+          <h1>Viết prompt hiệu quả cho các tác vụ học tập</h1>
+          <p class="project-hero-lead">Bài tập xây dựng ba cấp độ prompt cho ba tác vụ: tóm tắt hoặc phân tích tài liệu, giải thích một khái niệm phức tạp và tạo bộ câu hỏi ôn tập. Kết quả được thử nghiệm với ChatGPT và so sánh trực tiếp.</p>
+          <div class="project-meta"><div><small>Người thực hiện</small><strong>Nguyễn Ngọc Bảo Hoà</strong></div><div><small>Mã sinh viên</small><strong>25041644</strong></div><div><small>Công cụ</small><strong>ChatGPT / Prompt engineering</strong></div></div>
         </div>
-        <aside class="content-aside">
-          <div class="paper-card">
-            <div class="section-label">Thông tin nhanh</div>
-            <p><strong>Tên bài:</strong> Bài 03</p>
-            <p><strong>Chủ đề:</strong> Viết prompt hiệu quả cho các tác vụ học tập</p>
-            <p><strong>Hình thức:</strong> Báo cáo kèm minh chứng</p>
-            <p><strong>Người thực hiện:</strong> Nguyễn Ngọc Bảo Hoà</p>
-          </div>
-          <div class="paper-card">
-            <div class="section-label">Tệp gốc</div>
-            <p>Phiên bản PDF ban đầu vẫn được đính kèm để tiện đối chiếu.</p>
-            <div style="display:flex; flex-direction:column; gap:.75rem;">
-              <a class="button" href="../assets/docs/BTW3.pdf" target="_blank" rel="noopener">Mở file PDF</a>
-              <a class="button secondary" href="../index.html#du-an">Quay về danh sách bài</a>
-            </div>
-          </div>
-          <div class="paper-card">
-            <div class="section-label">Liên bài</div>
-            <div style="display:flex; flex-direction:column; gap:.75rem;">
-              <a class="nav-link active" href="../contact.html">Trang liên hệ</a>
-              <a class="nav-link active" href="../assets/docs/Thong-tin-va-yeu-cau.pdf" target="_blank" rel="noopener">Thông tin &amp; yêu cầu</a>
-            </div>
-          </div>
+        <div class="project-hero-image"><img src="../images/work-items/work-item-3.jpg" alt="Tổng quan bài 03"></div>
+      </section>
+
+      <div class="project-shell">
+        <div class="project-content">
+          <section class="project-section"><div class="project-section-number">Giới thiệu</div><h2>Cách trình bày trên website</h2><p>Nội dung dưới đây được viết lại từ báo cáo gốc để bảo đảm hiển thị tiếng Việt ổn định và tránh lỗi font. Trình tự của bài được giữ nguyên; mỗi phần mô tả được đặt trước, ảnh minh chứng liên quan được đặt ngay bên dưới. Những nội dung có dạng bảng được dựng lại thành bảng HTML để dễ đọc trên máy tính và điện thoại.</p></section>
+          <section class="project-section"><div class="project-section-number">Phần 01</div><h2>Tác vụ 1 · Khó khăn khi học ngoại ngữ</h2><p>Prompt cơ bản chỉ nêu chủ đề nên dễ nhập nhưng chưa quy định phạm vi, bố cục hoặc độ dài. Prompt cải tiến bổ sung các nội dung cần có như từ vựng, ngữ pháp, phát âm, giao tiếp và sự thiếu tự tin. Prompt nâng cao đặt AI vào vai giáo viên ngoại ngữ có kinh nghiệm, yêu cầu phân tích nguyên nhân, ví dụ và giải pháp.</p><p>Qua so sánh, prompt nâng cao cho câu trả lời có chiều sâu và tính hướng dẫn cao hơn, trong khi prompt cơ bản phù hợp khi chỉ cần một câu trả lời nhanh.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw3/p05-img01.png" alt="Kết quả thử nghiệm prompt cơ bản và cải tiến cho chủ đề học ngoại ngữ."><figcaption>Kết quả thử nghiệm prompt cơ bản và cải tiến cho chủ đề học ngoại ngữ.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p05-img02.png" alt="Kết quả thử nghiệm prompt nâng cao cho chủ đề học ngoại ngữ."><figcaption>Kết quả thử nghiệm prompt nâng cao cho chủ đề học ngoại ngữ.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p06-img01.png" alt="Một phần đầu ra khi AI phân tích khó khăn của người học ngoại ngữ."><figcaption>Một phần đầu ra khi AI phân tích khó khăn của người học ngoại ngữ.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p06-img02.png" alt="Đầu ra mở rộng với giải pháp và ví dụ minh hoạ."><figcaption>Đầu ra mở rộng với giải pháp và ví dụ minh hoạ.</figcaption></figure></div></section><section class="project-section"><div class="project-section-number">Phần 02</div><h2>Tác vụ 2 · Giải thích vấn đề bạo lực học đường</h2><p>Ở prompt cơ bản, yêu cầu chỉ là giải thích khái niệm “bạo lực học đường”. Phiên bản cải tiến yêu cầu trình bày thực trạng, nguyên nhân, hậu quả và giải pháp bằng gạch đầu dòng.</p><p>Phiên bản nâng cao đặt vai trò là giáo viên tâm lý học đường, yêu cầu phân tích nguyên nhân từ gia đình, nhà trường và mạng xã hội; giải thích hậu quả, đưa ví dụ thực tế và đề xuất giải pháp cụ thể. Cách viết này định hướng rõ cả nội dung lẫn giọng điệu.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw3/p07-img01.png" alt="Đầu ra giải thích khái niệm và thực trạng bạo lực học đường."><figcaption>Đầu ra giải thích khái niệm và thực trạng bạo lực học đường.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p07-img02.png" alt="Đầu ra phân tích nguyên nhân và hậu quả."><figcaption>Đầu ra phân tích nguyên nhân và hậu quả.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p08-img01.png" alt="Đầu ra mở rộng với giải pháp và ví dụ thực tế."><figcaption>Đầu ra mở rộng với giải pháp và ví dụ thực tế.</figcaption></figure></div></section><section class="project-section"><div class="project-section-number">Phần 03</div><h2>Tác vụ 3 · Tạo bộ câu hỏi ôn tập</h2><p>Prompt cơ bản yêu cầu tạo 10 câu hỏi ngắn để ghi nhớ kiến thức. Prompt cải tiến bổ sung cấu trúc nội dung và định dạng trình bày. Prompt nâng cao yêu cầu phân loại câu hỏi, có đáp án hoặc gợi ý, đồng thời tăng mức độ vận dụng.</p><p>Kết quả cho thấy prompt càng cụ thể thì bộ câu hỏi càng có cấu trúc, tránh trùng lặp và phù hợp hơn với mục tiêu ôn tập.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw3/p09-img01.png" alt="Bộ câu hỏi được tạo từ prompt cơ bản."><figcaption>Bộ câu hỏi được tạo từ prompt cơ bản.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p09-img02.png" alt="Bộ câu hỏi được tạo từ prompt cải tiến."><figcaption>Bộ câu hỏi được tạo từ prompt cải tiến.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p10-img01.png" alt="Một phần câu hỏi và đáp án do AI tạo."><figcaption>Một phần câu hỏi và đáp án do AI tạo.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p10-img02.png" alt="Bộ câu hỏi có cấu trúc rõ hơn ở prompt nâng cao."><figcaption>Bộ câu hỏi có cấu trúc rõ hơn ở prompt nâng cao.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p11-img01.png" alt="Đầu ra tiếp theo của bộ câu hỏi ôn tập."><figcaption>Đầu ra tiếp theo của bộ câu hỏi ôn tập.</figcaption></figure><figure class="project-figure"><img src="../images/btw3/p11-img02.png" alt="Phần kết quả cuối của quá trình thử nghiệm."><figcaption>Phần kết quả cuối của quá trình thử nghiệm.</figcaption></figure></div></section>
+          <section class="project-section"><div class="project-section-number">Prompt đã sử dụng</div><h2>Cấu trúc câu lệnh trong bài</h2><div class="prompt-block"><header><span>Tóm tắt / phân tích chủ đề học ngoại ngữ</span><span>Cơ bản</span></header><div class="prompt-copy">Hãy viết về những khó khăn của việc học ngoại ngữ.</div></div><div class="prompt-block"><header><span>Tóm tắt / phân tích chủ đề học ngoại ngữ</span><span>Cải tiến</span></header><div class="prompt-copy">Hãy trình bày những khó khăn thường gặp khi học ngoại ngữ, gồm từ vựng, ngữ pháp, phát âm, giao tiếp và sự thiếu tự tin. Viết ngắn gọn, dễ hiểu và có ví dụ minh hoạ.</div></div><div class="prompt-block"><header><span>Tóm tắt / phân tích chủ đề học ngoại ngữ</span><span>Nâng cao</span></header><div class="prompt-copy">Bạn là một giáo viên ngoại ngữ có kinh nghiệm. Hãy phân tích những khó khăn phổ biến khi học ngoại ngữ, giải thích nguyên nhân, đưa ví dụ cho từng khó khăn và đề xuất giải pháp cải thiện.</div></div><div class="prompt-block"><header><span>Giải thích khái niệm phức tạp</span><span>Cơ bản</span></header><div class="prompt-copy">Hãy giải thích khái niệm “bạo lực học đường”.</div></div><div class="prompt-block"><header><span>Giải thích khái niệm phức tạp</span><span>Cải tiến</span></header><div class="prompt-copy">Hãy trình bày thực trạng bạo lực học đường hiện nay, gồm nguyên nhân, hậu quả và giải pháp. Viết ngắn gọn, rõ ràng, trình bày bằng gạch đầu dòng.</div></div><div class="prompt-block"><header><span>Giải thích khái niệm phức tạp</span><span>Nâng cao</span></header><div class="prompt-copy">Bạn là một giáo viên tâm lý học đường có kinh nghiệm. Hãy phân tích bạo lực học đường từ góc độ gia đình, nhà trường và mạng xã hội; giải thích hậu quả, đưa ví dụ và đề xuất giải pháp cụ thể.</div></div><div class="prompt-block"><header><span>Tạo bộ câu hỏi ôn tập</span><span>Cơ bản</span></header><div class="prompt-copy">Hãy tạo 10 câu hỏi ngắn về chủ đề bạo lực học đường để giúp người học ghi nhớ kiến thức cơ bản.</div></div></section>
+          <section class="project-section"><div class="project-section-number">Bảng tổng hợp</div><h2>So sánh ba cấp độ prompt</h2><div class="project-table-wrap"><table class="project-table"><thead><tr><th>Cấp độ</th><th>Cấu trúc</th><th>Ưu điểm</th><th>Hạn chế</th></tr></thead><tbody><tr><td>Cơ bản</td><td>Một câu lệnh ngắn, chủ yếu nêu chủ đề</td><td>Nhanh, dễ nhập, phù hợp khi cần ý tưởng ban đầu</td><td>Dễ lan man, thiếu định dạng và khó kiểm soát độ sâu</td></tr><tr><td>Cải tiến</td><td>Nêu rõ phạm vi, các ý bắt buộc và hình thức trình bày</td><td>Kết quả tập trung, dễ đọc và ổn định hơn</td><td>Vẫn có thể thiếu bối cảnh hoặc góc nhìn chuyên môn</td></tr><tr><td>Nâng cao</td><td>Có vai trò, bối cảnh, mục tiêu, ví dụ, tiêu chí và kết luận</td><td>Đầu ra logic, chuyên sâu và sát mục đích sử dụng</td><td>Prompt dài hơn và cần người dùng xác định yêu cầu rõ</td></tr></tbody></table></div></section>
+          <section class="project-section"><div class="project-section-number">Kết quả & cảm nhận</div><h2>Điều mình rút ra</h2><p>Mình rút ra rằng prompt hiệu quả cần nêu rõ mục tiêu, bối cảnh, phạm vi, định dạng đầu ra và tiêu chí chất lượng. Việc viết prompt tốt không thay thế tư duy của người học mà giúp định hướng AI để giảm thời gian chỉnh sửa.</p></section>
+          <div class="project-pagination"><a href="project-2.html">← Bài 02 · Thông tin học thuật</a><a href="project-4.html">Bài 04 · Hợp tác trực tuyến →</a></div>
+        </div>
+        <aside class="project-aside">
+          <div class="aside-card"><p class="mn">Thông tin bài</p><p><strong>Bài 03</strong></p><p>Viết prompt hiệu quả cho các tác vụ học tập</p></div>
+          <div class="aside-card"><p class="mn">Tài liệu gốc</p><p>Mở PDF để đối chiếu toàn bộ báo cáo.</p><a class="button-link" href="../images/docs/BTW3.pdf" target="_blank" rel="noopener"><span>Mở file PDF</span><span>↗</span></a></div>
+          <div class="aside-card"><p class="mn">Điều hướng</p><a class="button-link" href="../index.html#projects"><span>Danh sách bài</span><span>←</span></a><a class="button-link" href="../contact.html"><span>Hồ sơ sinh viên</span><span>→</span></a></div>
         </aside>
       </div>
-    </section>
-  </main>
-  
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <p class="overline">Kết thúc hành trình của học phần</p>
-      <h2 class="section-title" style="margin-top:1rem;">Portfolio như một cuốn nhật ký học tập số</h2>
-      <p class="section-lead">Mỗi dự án đều ghi lại một mảng kỹ năng khác nhau: quản lý dữ liệu, tìm kiếm thông tin, viết prompt, làm việc nhóm, ứng dụng AI và sử dụng AI một cách có trách nhiệm.</p>
-    </div>
-    <div class="cta-card">
-      <div>
-        <strong>Xem thêm thông tin tổng quan</strong>
-        <div class="muted">Tài liệu giới thiệu và yêu cầu của portfolio được đính kèm ngay trong website.</div>
-      </div>
-      <a class="button" href="../assets/docs/Thong-tin-va-yeu-cau.pdf" target="_blank" rel="noopener">Mở file gốc</a>
-    </div>
+    </main>
+    <footer class="project-footer"><p class="mn">Nguyễn Ngọc Bảo Hoà · 25041644</p><p class="mn">Portfolio CNS & AI · 2026</p></footer>
   </div>
-  <div class="container" style="margin-top:1.7rem; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
-    <small>© 2026 • Portfolio học phần CNS &amp; AI • Nguyễn Ngọc Bảo Hoà</small>
-    <small>Thiết kế theo concept: Hành trình qua ngôn ngữ và khung hình</small>
-  </div>
-</footer>
-<div class="lightbox" aria-hidden="true">
-  <button class="lightbox-close" type="button" aria-label="Đóng">×</button>
-  <img src="" alt="" />
-</div>
-
-  <script defer src="../assets/js/main.js"></script>
+  <div class="lightbox"><button type="button" aria-label="Đóng ảnh">×</button><img src="" alt=""></div>
+  <script type="module" src="../js/transition.js"></script><script type="module" src="../js/lenis-scroll.js"></script><script type="module" src="../js/menu.js"></script><script type="module" src="../js/project.js"></script>
 </body>
 </html>

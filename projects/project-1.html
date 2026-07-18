@@ -1,184 +1,64 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nguyễn Ngọc Bảo Hoà | Portfolio học phần CNS & AI</title>
-<meta name="description" content="Portfolio học phần Công nghệ số và AI của sinh viên Nguyễn Ngọc Bảo Hoà" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif:wght@600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/style.css" />
-
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Bài 01 - Thao tác cơ bản với tệp tin và thư mục của Nguyễn Ngọc Bảo Hoà.">
+  <title>Bài 01 | Quản lý tệp tin | Nguyễn Ngọc Bảo Hoà</title>
+  <link rel="icon" href="../images/global/site-icon.png">
+  <link rel="stylesheet" href="../css/transition.css"><link rel="stylesheet" href="../css/fonts.css"><link rel="stylesheet" href="../css/globals.css"><link rel="stylesheet" href="../css/menu.css"><link rel="stylesheet" href="../css/project.css"><link rel="stylesheet" href="../css/baohoa.css">
 </head>
 <body>
-  
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="../index.html">
-      <div class="brand-mark">H</div>
-      <div class="brand-copy">
-        <strong>Nguyễn Ngọc Bảo Hoà</strong>
-        <small>25041644 • Ngôn ngữ Trung Quốc</small>
-      </div>
-    </a>
-    <button class="menu-button" type="button" data-menu-button>Menu</button>
-    <nav class="nav-links" data-nav-links>
-      <a class="nav-link" href="../index.html#gioi-thieu">Giới thiệu</a><a class="nav-link" href="../index.html#du-an">Dự án</a><a class="nav-link" href="../index.html#tong-ket">Tổng kết</a><a class="nav-link" href="../contact.html">Liên hệ</a>
+  <div class="transition" aria-hidden="true"><div class="transition-overlay overlay-1"></div><div class="transition-overlay overlay-2"></div><div class="transition-overlay overlay-3"></div><div class="transition-overlay overlay-4"></div><div class="transition-overlay overlay-5"></div></div>
+  <div class="page project-page">
+    
+    <nav>
+      <div class="logo"><div class="logo-container"><p class="mn"><a href="../index.html">B ✦ H</a></p></div></div>
+      <div class="menu-toggle-btn" role="button" tabindex="0" aria-label="Mở menu"><div class="menu-toggle-btn-wrapper"><p class="mn open-label">Menu</p><p class="mn close-label">Đóng</p></div></div>
     </nav>
-  </div>
-</header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container page-hero-grid">
-        <div>
-          <div class="breadcrumb"><a href="../index.html">Trang chủ</a> <span>/</span> <a href="../index.html#du-an">Dự án</a> <span>/</span> <strong>Bài 01</strong></div>
-          <div class="project-number" style="margin-top:1rem;">Bài 01 • Windows practice • File management</div>
-          <h1 class="hero-title" style="font-size:clamp(2.3rem,4.8vw,4.4rem); margin:.8rem 0 1rem;">Thao tác cơ bản với tệp tin và thư mục</h1>
-          <p class="hero-copy">Bài làm tập trung vào các thao tác nền tảng khi quản lý dữ liệu trên máy tính: mở File Explorer, tạo thư mục, tạo tệp văn bản, đổi tên, sao chép, di chuyển, xoá và khôi phục dữ liệu. Toàn bộ quy trình được ghi lại bằng ảnh chụp màn hình theo đúng thứ tự thực hiện.</p>
-          <div class="info-chips"><span class="chip">Quản lý tệp</span><span class="chip">Windows</span><span class="chip">Ảnh minh chứng</span></div>
-        </div>
-        <div class="page-hero-card">
-          <img src="../assets/img/project-1-thumb.jpg" alt="Tổng quan Thao tác cơ bản với tệp tin và thư mục" />
-        </div>
+    <div class="nav-overlay">
+      <div class="nav-items">
+        <div class="nav-item"><p><a href="../index.html">Trang chủ</a></p></div>
+        <div class="nav-item"><p><a href="../index.html#about">Giới thiệu</a></p></div>
+        <div class="nav-item active"><p><a href="../index.html#projects">Dự án</a></p></div>
+        <div class="nav-item"><p><a href="../index.html#summary">Tổng kết</a></p></div>
+        <div class="nav-item"><p><a href="../contact.html">Liên hệ</a></p></div>
       </div>
-    </section>
-
-    <section class="section-space" style="padding-top:1.5rem;">
-      <div class="container content-layout">
-        <div class="content-main">
-          <article class="paper-card">
-            <div class="section-label">Khái quát bài làm</div>
-            <h2 style="margin-top:0;">Ý tưởng và định hướng trình bày</h2>
-            <p>Một bài thực hành cơ bản nhưng quan trọng để hình thành thói quen làm việc có tổ chức với thư mục và tệp tin.</p>
-            <p>Trong phiên bản website, nội dung được viết lại bằng lời văn mạch lạc hơn để tránh lỗi font và giảm cảm giác sao chép nguyên văn từ tài liệu gốc. Mỗi phần đều giữ đúng tinh thần bài làm ban đầu, đồng thời sắp xếp theo nguyên tắc: phần chữ đi trước, ảnh minh chứng đi sau.</p>
-          </article>
-          
-        <article class="paper-card">
-          <div class="section-label">Phần 1</div>
-          <h2 style="margin-top:0;">Tóm tắt quy trình thực hiện</h2>
-          <p>Ở phần đầu, mình mở File Explorer và truy cập vào ổ đĩa làm việc. Sau đó, mình tạo thư mục chính mang tên ThucHanh_NguyenNgocBaoHoa để làm không gian lưu trữ cho toàn bộ bài thực hành.</p><p>Tiếp theo, mình tạo tệp văn bản ban đầu, đổi tên tệp sang dạng cụ thể hơn và thêm thư mục con TaiLieu để phân loại nội dung. Đây là bước giúp việc tổ chức dữ liệu rõ ràng ngay từ đầu.</p>
-          <div class="figure-grid">
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-1.png" alt="Minh chứng 1 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 1 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-2.png" alt="Minh chứng 2 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 2 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-3.png" alt="Minh chứng 3 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 3 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            </div>
-        </article>
-        
-        <article class="paper-card">
-          <div class="section-label">Phần 2</div>
-          <h2 style="margin-top:0;">Sao chép, di chuyển và xoá dữ liệu</h2>
-          <p>Sau khi đã có cấu trúc thư mục, mình thực hiện thao tác sao chép tệp GhiChuQuanTrong.txt vào thư mục TaiLieu để minh hoạ sự khác nhau giữa bản gốc và bản sao.</p><p>Mình cũng tạo thêm một tệp khác để thực hành thao tác cắt và dán. Khác với copy, thao tác này làm cho tệp gốc biến mất khỏi vị trí cũ và chỉ còn ở thư mục mới.</p><p>Cuối cùng là thao tác xoá tệp, xoá vĩnh viễn và khôi phục từ thùng rác. Nhờ đó, bài thực hành bao quát đủ các tình huống xử lý dữ liệu cơ bản trên máy tính.</p>
-          <div class="figure-grid">
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-4.png" alt="Minh chứng 1 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 1 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-5.png" alt="Minh chứng 2 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 2 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-6.png" alt="Minh chứng 3 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 3 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-7.png" alt="Minh chứng 4 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 4 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            
-            <figure class="figure-card">
-              <img data-lightbox src="../assets/img/btw1/page-8.png" alt="Minh chứng 5 của Thao tác cơ bản với tệp tin và thư mục" />
-              <figcaption>Minh chứng 5 – tư liệu gốc được đặt ngay sau phần nội dung liên quan.</figcaption>
-            </figure>
-            </div>
-        </article>
-        
-          
-        <article class="paper-card">
-          <div class="section-label">Bảng tổng hợp</div>
-          <h2 style="margin-top:0;">Các thao tác chính trong bài</h2>
-          <table class="data-table">
-            <thead><tr><th>Nhóm thao tác</th><th>Nội dung thực hiện</th></tr></thead>
-            <tbody><tr><td>Khởi tạo</td><td>Mở File Explorer, chọn ổ đĩa hoặc thư mục làm việc, tạo thư mục mới</td></tr><tr><td>Tạo và đổi tên</td><td>Tạo tệp văn bản, đổi tên tệp, thêm thư mục con TaiLieu</td></tr><tr><td>Sao chép &amp; di chuyển</td><td>Dùng Copy/Paste để tạo bản sao và Cut/Paste để chuyển vị trí tệp</td></tr><tr><td>Xoá &amp; khôi phục</td><td>Xoá vào thùng rác, xoá vĩnh viễn bằng Shift + Delete, khôi phục tệp đã xoá</td></tr></tbody>
-          </table>
-        </article>
-        
-          <article class="paper-card">
-            <div class="section-label">Kết quả &amp; cảm nhận</div>
-            <h2 style="margin-top:0;">Điều mình rút ra sau bài tập</h2>
-            <p>Qua bài này, mình rèn được tính cẩn thận trong việc đặt tên, phân loại và xử lý tệp tin. Dù là thao tác cơ bản, đây là nền tảng quan trọng cho việc quản lý tài liệu học tập sau này.</p>
-          </article>
+      <div class="nav-footer">
+        <div class="nav-footer-item"><div class="nav-footer-item-header"><p class="mn">Portfolio</p></div><div class="nav-footer-item-copy"><p class="mn">Công nghệ số & AI</p></div></div>
+        <div class="nav-footer-item"><div class="nav-footer-item-copy"><p class="mn">行旅与光影</p></div></div>
+        <div class="nav-footer-item"><div class="nav-footer-item-header"><p class="mn">Sinh viên</p></div><div class="nav-footer-item-copy"><p class="mn">Nguyễn Ngọc Bảo Hoà</p></div></div>
+      </div>
+    </div>
+    <main>
+      <section class="project-hero" data-number="01">
+        <div class="project-hero-copy">
+          <div class="project-eyebrow">Bài 01 · Báo cáo thực hành</div>
+          <h1>Thao tác cơ bản với tệp tin và thư mục</h1>
+          <p class="project-hero-lead">Bài tập ghi lại đầy đủ quá trình tạo, đổi tên, sao chép, di chuyển, xoá và khôi phục tệp tin, thư mục. Nội dung được sắp xếp theo đúng thứ tự thao tác, phần mô tả đặt trước và ảnh minh chứng đặt ngay bên dưới.</p>
+          <div class="project-meta"><div><small>Người thực hiện</small><strong>Nguyễn Ngọc Bảo Hoà</strong></div><div><small>Mã sinh viên</small><strong>25041644</strong></div><div><small>Công cụ</small><strong>File Explorer / Finder</strong></div></div>
         </div>
-        <aside class="content-aside">
-          <div class="paper-card">
-            <div class="section-label">Thông tin nhanh</div>
-            <p><strong>Tên bài:</strong> Bài 01</p>
-            <p><strong>Chủ đề:</strong> Thao tác cơ bản với tệp tin và thư mục</p>
-            <p><strong>Hình thức:</strong> Báo cáo kèm minh chứng</p>
-            <p><strong>Người thực hiện:</strong> Nguyễn Ngọc Bảo Hoà</p>
-          </div>
-          <div class="paper-card">
-            <div class="section-label">Tệp gốc</div>
-            <p>Phiên bản PDF ban đầu vẫn được đính kèm để tiện đối chiếu.</p>
-            <div style="display:flex; flex-direction:column; gap:.75rem;">
-              <a class="button" href="../assets/docs/BTW1.pdf" target="_blank" rel="noopener">Mở file PDF</a>
-              <a class="button secondary" href="../index.html#du-an">Quay về danh sách bài</a>
-            </div>
-          </div>
-          <div class="paper-card">
-            <div class="section-label">Liên bài</div>
-            <div style="display:flex; flex-direction:column; gap:.75rem;">
-              <a class="nav-link active" href="../contact.html">Trang liên hệ</a>
-              <a class="nav-link active" href="../assets/docs/Thong-tin-va-yeu-cau.pdf" target="_blank" rel="noopener">Thông tin &amp; yêu cầu</a>
-            </div>
-          </div>
+        <div class="project-hero-image"><img src="../images/work-items/work-item-1.jpg" alt="Tổng quan bài 01"></div>
+      </section>
+
+      <div class="project-shell">
+        <div class="project-content">
+          <section class="project-section"><div class="project-section-number">Giới thiệu</div><h2>Cách trình bày trên website</h2><p>Nội dung dưới đây được viết lại từ báo cáo gốc để bảo đảm hiển thị tiếng Việt ổn định và tránh lỗi font. Trình tự của bài được giữ nguyên; mỗi phần mô tả được đặt trước, ảnh minh chứng liên quan được đặt ngay bên dưới. Những nội dung có dạng bảng được dựng lại thành bảng HTML để dễ đọc trên máy tính và điện thoại.</p></section>
+          <section class="project-section"><div class="project-section-number">Phần 01</div><h2>Mở File Explorer và chọn vị trí làm việc</h2><p>Mình mở trình quản lý tệp trên máy tính và truy cập vào vị trí lưu trữ phù hợp. Đây là bước chuẩn bị để toàn bộ thao tác sau được thực hiện trong cùng một không gian, tránh nhầm lẫn giữa các thư mục.</p><p>Sau đó, mình tạo thư mục chính mang tên ThucHanh_NguyenNgocBaoHoa để lưu toàn bộ tệp và thư mục con của bài thực hành.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw1/p01-img01.jpeg" alt="Mở trình quản lý tệp và xác định vị trí làm việc."><figcaption>Mở trình quản lý tệp và xác định vị trí làm việc.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p01-img02.jpeg" alt="Truy cập vào thư mục hoặc ổ đĩa đã chọn."><figcaption>Truy cập vào thư mục hoặc ổ đĩa đã chọn.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p02-img01.jpeg" alt="Mở menu tạo thư mục mới."><figcaption>Mở menu tạo thư mục mới.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p02-img02.jpeg" alt="Thư mục thực hành sau khi được tạo."><figcaption>Thư mục thực hành sau khi được tạo.</figcaption></figure></div></section><section class="project-section"><div class="project-section-number">Phần 02</div><h2>Tạo và đổi tên tệp văn bản</h2><p>Trong thư mục chính, mình tạo một tệp văn bản mới và đặt tên ban đầu là GhiChu.txt. Tiếp theo, mình đổi tên tệp thành GhiChuQuanTrong.txt để thực hành thao tác Rename và hình thành thói quen đặt tên rõ nghĩa.</p><p>Mình tiếp tục tạo thư mục con TaiLieu nhằm phân loại dữ liệu trước khi thực hiện sao chép và di chuyển tệp.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw1/p03-img01.jpeg" alt="Tạo tệp văn bản mới và nhập tên tệp."><figcaption>Tạo tệp văn bản mới và nhập tên tệp.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p04-img01.jpeg" alt="Đổi tên tệp thành GhiChuQuanTrong.txt."><figcaption>Đổi tên tệp thành GhiChuQuanTrong.txt.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p05-img01.jpeg" alt="Tạo thư mục con TaiLieu."><figcaption>Tạo thư mục con TaiLieu.</figcaption></figure></div></section><section class="project-section"><div class="project-section-number">Phần 03</div><h2>Sao chép, di chuyển và xoá tệp</h2><p>Mình sao chép tệp GhiChuQuanTrong.txt vào thư mục TaiLieu bằng thao tác Copy và Paste. Tệp gốc vẫn được giữ lại ở vị trí ban đầu, đồng thời một bản sao xuất hiện trong thư mục đích.</p><p>Để phân biệt với sao chép, mình tạo một tệp khác rồi dùng Cut và Paste. Sau thao tác này, tệp không còn ở vị trí cũ mà chỉ xuất hiện trong thư mục mới.</p><p>Cuối cùng, mình thực hành xoá tệp vào thùng rác, xoá vĩnh viễn bằng tổ hợp Shift + Delete và khôi phục một tệp từ thùng rác.</p><div class="project-figures"><figure class="project-figure"><img src="../images/btw1/p05-img02.png" alt="Sao chép tệp vào thư mục TaiLieu."><figcaption>Sao chép tệp vào thư mục TaiLieu.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p06-img01.jpeg" alt="Chọn tệp cần di chuyển."><figcaption>Chọn tệp cần di chuyển.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p06-img02.jpeg" alt="Thực hiện thao tác cắt hoặc dán tệp."><figcaption>Thực hiện thao tác cắt hoặc dán tệp.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p07-img01.png" alt="Tệp sau khi được chuyển tới vị trí mới."><figcaption>Tệp sau khi được chuyển tới vị trí mới.</figcaption></figure><figure class="project-figure"><img src="../images/btw1/p07-img02.png" alt="Thao tác xoá và quản lý tệp đã xoá."><figcaption>Thao tác xoá và quản lý tệp đã xoá.</figcaption></figure></div></section>
+          
+          <section class="project-section"><div class="project-section-number">Bảng tổng hợp</div><h2>Bảng tóm tắt thao tác</h2><div class="project-table-wrap"><table class="project-table"><thead><tr><th>Nhóm thao tác</th><th>Nội dung thực hiện</th><th>Kết quả</th></tr></thead><tbody><tr><td>Khởi tạo</td><td>Mở trình quản lý tệp, chọn vị trí và tạo thư mục thực hành</td><td>Có không gian lưu trữ riêng cho bài</td></tr><tr><td>Tạo và đổi tên</td><td>Tạo tệp văn bản, đổi tên tệp, tạo thư mục con</td><td>Tên tệp và cấu trúc thư mục rõ ràng</td></tr><tr><td>Sao chép</td><td>Copy và Paste tệp vào thư mục TaiLieu</td><td>Giữ bản gốc và tạo thêm bản sao</td></tr><tr><td>Di chuyển</td><td>Cut và Paste tệp sang thư mục mới</td><td>Tệp biến mất khỏi vị trí cũ</td></tr><tr><td>Xoá và khôi phục</td><td>Xoá vào thùng rác, xoá vĩnh viễn, khôi phục</td><td>Phân biệt được các cách xoá dữ liệu</td></tr></tbody></table></div></section>
+          <section class="project-section"><div class="project-section-number">Kết quả & cảm nhận</div><h2>Điều mình rút ra</h2><p>Qua bài thực hành, mình hiểu rõ hơn sự khác nhau giữa sao chép và di chuyển, đồng thời hình thành thói quen đặt tên và tổ chức dữ liệu khoa học. Đây là nền tảng quan trọng để quản lý tài liệu học tập ở các bài sau.</p></section>
+          <div class="project-pagination"><a href="../index.html#projects">← Danh sách dự án</a><a href="project-2.html">Bài 02 · Thông tin học thuật →</a></div>
+        </div>
+        <aside class="project-aside">
+          <div class="aside-card"><p class="mn">Thông tin bài</p><p><strong>Bài 01</strong></p><p>Thao tác cơ bản với tệp tin và thư mục</p></div>
+          <div class="aside-card"><p class="mn">Tài liệu gốc</p><p>Mở PDF để đối chiếu toàn bộ báo cáo.</p><a class="button-link" href="../images/docs/BTW1.pdf" target="_blank" rel="noopener"><span>Mở file PDF</span><span>↗</span></a></div>
+          <div class="aside-card"><p class="mn">Điều hướng</p><a class="button-link" href="../index.html#projects"><span>Danh sách bài</span><span>←</span></a><a class="button-link" href="../contact.html"><span>Hồ sơ sinh viên</span><span>→</span></a></div>
         </aside>
       </div>
-    </section>
-  </main>
-  
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <p class="overline">Kết thúc hành trình của học phần</p>
-      <h2 class="section-title" style="margin-top:1rem;">Portfolio như một cuốn nhật ký học tập số</h2>
-      <p class="section-lead">Mỗi dự án đều ghi lại một mảng kỹ năng khác nhau: quản lý dữ liệu, tìm kiếm thông tin, viết prompt, làm việc nhóm, ứng dụng AI và sử dụng AI một cách có trách nhiệm.</p>
-    </div>
-    <div class="cta-card">
-      <div>
-        <strong>Xem thêm thông tin tổng quan</strong>
-        <div class="muted">Tài liệu giới thiệu và yêu cầu của portfolio được đính kèm ngay trong website.</div>
-      </div>
-      <a class="button" href="../assets/docs/Thong-tin-va-yeu-cau.pdf" target="_blank" rel="noopener">Mở file gốc</a>
-    </div>
+    </main>
+    <footer class="project-footer"><p class="mn">Nguyễn Ngọc Bảo Hoà · 25041644</p><p class="mn">Portfolio CNS & AI · 2026</p></footer>
   </div>
-  <div class="container" style="margin-top:1.7rem; display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
-    <small>© 2026 • Portfolio học phần CNS &amp; AI • Nguyễn Ngọc Bảo Hoà</small>
-    <small>Thiết kế theo concept: Hành trình qua ngôn ngữ và khung hình</small>
-  </div>
-</footer>
-<div class="lightbox" aria-hidden="true">
-  <button class="lightbox-close" type="button" aria-label="Đóng">×</button>
-  <img src="" alt="" />
-</div>
-
-  <script defer src="../assets/js/main.js"></script>
+  <div class="lightbox"><button type="button" aria-label="Đóng ảnh">×</button><img src="" alt=""></div>
+  <script type="module" src="../js/transition.js"></script><script type="module" src="../js/lenis-scroll.js"></script><script type="module" src="../js/menu.js"></script><script type="module" src="../js/project.js"></script>
 </body>
 </html>

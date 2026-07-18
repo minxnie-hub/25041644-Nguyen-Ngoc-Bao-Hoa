@@ -1,0 +1,114 @@
+/* Bảo Hoà concept: editorial travel journal × film contact sheet */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  opacity: .045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+}
+.hero { background: radial-gradient(circle at 70% 40%, rgba(157,184,173,.32), transparent 29%), var(--bg); }
+.hero .hero-header h1 { font-size: clamp(5rem, 15.2vw, 15rem); white-space: nowrap; }
+.hero .hero-header.hero-header-1 { transform: translateX(-4%); }
+.hero .hero-header.hero-header-2 { transform: translateX(5%); }
+.hero-kicker {
+  position: absolute;
+  top: 7.2rem;
+  left: 2rem;
+  max-width: 26rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent1);
+}
+.hero-kicker p:first-child { margin-bottom: .45rem; }
+.hero-kicker p:last-child { color: rgba(32,49,44,.72); }
+.hero-stamp {
+  position: absolute;
+  right: 3rem;
+  top: 8rem;
+  width: 108px;
+  aspect-ratio: 1;
+  border: 2px solid var(--accent1);
+  color: var(--accent1);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  transform: rotate(8deg);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+.hero-img-holder .hero-img { background: var(--paper); box-shadow: 14px 14px 0 var(--fg); }
+.hero-img-holder .hero-img::after {
+  content: "FRAME 25041644 · LANGUAGE / JOURNEY / DIGITAL";
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: .5rem .75rem;
+  background: var(--paper);
+  border: 1px solid var(--fg);
+  font: 700 .72rem/1.2 var(--font-mono);
+  letter-spacing: .06em;
+}
+.about-hero { background: var(--paper); }
+.about-hero .about-hero-header h1 { font-size: clamp(3.7rem, 9vw, 8.2rem); }
+.about-hero .about-hero-bio { width: min(760px, 62%); }
+.about-hero .about-hero-portrait { width: min(230px, 17%); border-radius: 0; box-shadow: 14px 14px 0 var(--accent1); }
+.about-hero .about-hero-portrait img { object-position: 50% 25%; }
+.about-copy .about-copy-content { width: min(850px, 64%); background: var(--accent3); border-radius: 0; box-shadow: 14px 14px 0 var(--fg); }
+.about-copy .about-copy-content h3 { font-family: var(--font-display); text-transform: none; line-height: 1.18; }
+.about-copy .tag { border: 1px solid var(--paper); border-radius: 999px; }
+.about-copy .tag p { font-family: var(--font-mono); padding: .62em .85em; }
+.stats .stats-item-1, .stats .stats-item-2, .stats .stats-item-3 { aspect-ratio: auto; min-height: 260px; border-radius: 0; border: .2em solid var(--fg); box-shadow: 10px 10px 0 var(--fg); }
+.stats .stats-item-1 { background: var(--accent2); }
+.stats .stats-item-2 { background: var(--accent3); }
+.stats .stats-item-3 { background: var(--accent4); color: var(--paper); }
+.stats .stats-col h2 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.stats-list { margin-top: 1rem; display: grid; gap: .65rem; }
+.stats-list p { font-size: .95rem; }
+.featured-work { background: var(--bg); }
+.featured-work .featured-title-wrapper h1 { font-size: clamp(3.6rem, 7vw, 7.5rem); max-width: 86vw; }
+.featured-work .featured-title-wrapper a { display: inline-block; transition: color .25s ease, transform .25s ease; }
+.featured-work .featured-title-wrapper a:hover { color: var(--accent1); transform: translateY(-6px); }
+.featured-work .featured-img-card { border: 3px solid var(--fg); border-radius: 0; box-shadow: 10px 10px 0 rgba(32,49,44,.28); }
+.featured-title-img { border-radius: 0; }
+.featured-work .featured-work-indicator { border-radius: 0; }
+.services-header { background: var(--paper); }
+.services-header .services-header-title h1 { font-size: clamp(3rem, 7vw, 7rem); }
+.services .service-card-inner { border: .22em solid var(--fg); border-radius: 0; box-shadow: 12px 12px 0 var(--fg); }
+.services .service-card-content h1 { font-size: clamp(3rem, 7vw, 7rem); }
+.service-card-copy { max-width: 46rem; display: grid; gap: 1rem; }
+.service-card-copy p { font-size: 1rem; }
+.services .service-card-img { border-radius: 0; border: 2px solid var(--fg); }
+.summary-section { padding: 10rem 2rem; background: var(--paper); }
+.summary-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 4rem; align-items: start; }
+.summary-kicker { position: sticky; top: 7rem; }
+.summary-kicker h1 { font-size: clamp(3.8rem, 7vw, 7rem); margin-bottom: 1rem; }
+.summary-copy { display: grid; gap: 2rem; }
+.summary-card { border-top: 2px solid var(--fg); padding-top: 1.3rem; }
+.summary-card h3 { text-transform: none; font-size: clamp(1.8rem, 3vw, 2.7rem); margin-bottom: .8rem; }
+.summary-card p + p { margin-top: .9rem; }
+.source-badge { display: inline-flex; align-items: center; gap: .55rem; border: 1px solid var(--fg); padding: .7rem .85rem; font: 700 .72rem/1.2 var(--font-mono); text-transform: uppercase; margin-top: 1rem; }
+.source-badge::before { content: "↗"; color: var(--accent1); }
+footer .footer-header h1 { font-size: clamp(4rem, 10vw, 11rem); }
+.footer-row .footer-col { min-width: 160px; }
+.footer-row .footer-col p:first-child { color: var(--accent1); }
+.footer-symbols { display: none; }
+.nav-overlay .nav-items .nav-item p { font-family: var(--font-display); font-style: italic; text-transform: none; }
+.nav-overlay { background: var(--accent3); }
+nav { mix-blend-mode: normal; }
+.logo-container, .menu-toggle-btn { background: var(--paper); border: 1px solid var(--fg); }
+.logo-container p, .menu-toggle-btn p { color: var(--fg); }
+@media (max-width: 1000px) {
+  .hero-kicker { top: 6.5rem; left: 1rem; right: 1rem; max-width: none; }
+  .hero-stamp { display:none; }
+  .hero .hero-header h1 { font-size: clamp(4rem, 16vw, 8rem); }
+  .about-hero .about-hero-bio { width:100%; }
+  .about-hero .about-hero-portrait { width: 34%; max-width: 150px; }
+  .about-copy .about-copy-content { width: 100%; }
+  .summary-section { padding: 7rem 1rem; }
+  .summary-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .summary-kicker { position: static; }
+  .services .service-card-inner { box-shadow: 8px 8px 0 var(--fg); }
+}
