@@ -831,3 +831,14 @@ body.menu-scroll-locked {
   .portfolio-purpose-index { position: static; display: flex; align-items: end; justify-content: space-between; }
   .portfolio-purpose-index span { font-size: 5rem; margin: 0; }
 }
+
+/* V10 — stable, exact menu destinations. The IDs live on zero-height markers
+   outside animated section boxes, so Lenis always receives the correct position. */
+.section-scroll-anchor {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  scroll-margin-top: 18px;
+  pointer-events: none;
+}
