@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("a[href]").forEach((link) => {
     link.addEventListener("click", async (event) => {
+      if (link.closest(".nav-overlay")) return;
       if (event.defaultPrevented) return;
 
       const raw = link.getAttribute("href");

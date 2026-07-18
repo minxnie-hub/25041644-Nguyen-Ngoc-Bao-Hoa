@@ -9,12 +9,12 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;family=Noto+Serif:wght@600;700&amp;family=Noto+Serif+SC:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <title>Nguyễn Ngọc Bảo Hoà | Portfolio CNS &amp; AI</title>
-<link href="./images/global/site-icon.png" rel="icon">
-<link href="./css/transition.css" rel="stylesheet">
-<link href="./css/fonts.css" rel="stylesheet">
-<link href="./css/globals.css" rel="stylesheet"/>
-<link href="./css/menu.css" rel="stylesheet"/>
-<link href="./css/home.css" rel="stylesheet"/>
+<link href="./images/global/site-icon.png" rel="icon"/>
+<link href="./css/transition.css" rel="stylesheet"/>
+<link href="./css/fonts.css" rel="stylesheet"/>
+<link href="./css/globals.css" rel="stylesheet">
+<link href="./css/menu.css" rel="stylesheet">
+<link href="./css/home.css" rel="stylesheet">
 <link href="./css/about.css" rel="stylesheet"/>
 <link href="./css/footer.css" rel="stylesheet"/>
 <link href="./css/baohoa.css" rel="stylesheet"/>
@@ -40,10 +40,10 @@
 </nav>
 <div class="nav-overlay">
 <div class="nav-items">
-<div class="nav-item active"><p><a href="./index.html">Trang chủ</a></p></div>
-<div class="nav-item"><p><a href="./index.html#about">Giới thiệu</a></p></div>
-<div class="nav-item"><p><a href="./index.html#projects">Dự án</a></p></div>
-<div class="nav-item"><p><a href="./index.html#summary">Tổng kết</a></p></div>
+<div class="nav-item active"><p><a href="#top">Trang chủ</a></p></div>
+<div class="nav-item"><p><a href="#about">Giới thiệu</a></p></div>
+<div class="nav-item"><p><a href="#projects">Dự án</a></p></div>
+<div class="nav-item"><p><a href="#summary">Tổng kết</a></p></div>
 <div class="nav-item"><p><a href="./contact.html">Liên hệ</a></p></div>
 </div>
 <div class="nav-footer">
@@ -59,7 +59,7 @@
 </div>
 </div>
 <main>
-<section class="hero">
+<section class="hero" id="top">
 <div class="hero-kicker">
 <p class="mn">Portfolio học phần Công nghệ số &amp; AI</p>
 <p>Hành trình qua ngôn ngữ, công nghệ và những “khung hình” ghi lại quá trình học tập.</p>
@@ -86,11 +86,15 @@
 </div>
 <div class="about-hero-portrait"><img alt="Trang giới thiệu Nguyễn Ngọc Bảo Hoà" src="./images/services-header/portrait.jpeg"/></div>
 </section>
-<section class="about-copy">
+<section aria-labelledby="development-title" class="about-copy">
 <div class="about-copy-content">
-<p class="mn">Mục tiêu phát triển</p>
-<h3>Mình muốn nâng cao toàn diện <span>nghe, nói, đọc, viết tiếng Trung</span>; phát triển kỹ năng công nghệ, sử dụng AI có trách nhiệm và rèn luyện khả năng giao tiếp, thuyết trình, làm việc nhóm, quản lý thời gian.</h3>
-<p>Portfolio không chỉ lưu trữ bài tập mà còn giúp mình theo dõi sự tiến bộ, nhìn rõ điểm mạnh và tạo nền tảng cho học bổng, thực tập hoặc công việc sau này.</p>
+<p class="mn">Mục tiêu học tập &amp; phát triển bản thân</p>
+<h3 id="development-title">Phát triển năng lực ngôn ngữ, công nghệ và kỹ năng làm việc trong môi trường số.</h3>
+<div class="long-form-copy">
+<p>Mục tiêu học tập của mình là không ngừng nâng cao năng lực tiếng Trung, đặc biệt ở bốn kỹ năng nghe, nói, đọc và viết. Mình cũng muốn vận dụng ngôn ngữ linh hoạt hơn trong giảng dạy, biên phiên dịch và giao tiếp thực tế.</p>
+<p>Bên cạnh kiến thức chuyên ngành, mình hướng đến việc phát triển kỹ năng công nghệ thông tin, sử dụng thành thạo các công cụ số và ứng dụng AI để hỗ trợ học tập, nghiên cứu cũng như nâng cao hiệu quả công việc.</p>
+<p>Mình luôn chú trọng rèn luyện các kỹ năng mềm gồm giao tiếp, làm việc nhóm, thuyết trình, quản lý thời gian và giải quyết vấn đề. Thông qua học tập và trải nghiệm thực tế, mình mong muốn hình thành tư duy linh hoạt, khả năng thích nghi tốt với sự phát triển của công nghệ, làm việc hiệu quả trong môi trường số và sẵn sàng đáp ứng yêu cầu của thị trường lao động trong tương lai.</p>
+</div>
 </div>
 <div class="tag" id="tag-1"><p>旅行 · Du lịch</p></div>
 <div class="tag" id="tag-2"><p>电影 · Điện ảnh</p></div>
@@ -121,6 +125,16 @@
 <h3>Thích nghi trong môi trường số</h3>
 <div class="stats-list"><p>Giao tiếp, làm việc nhóm, thuyết trình.</p><p>Quản lý thời gian và giải quyết vấn đề.</p></div>
 </div>
+</div>
+</section><section aria-labelledby="portfolio-purpose-title" class="portfolio-purpose">
+<div class="portfolio-purpose-index">
+<p class="mn">Mục tiêu Portfolio</p>
+<span>03</span>
+</div>
+<div class="portfolio-purpose-copy">
+<h2 id="portfolio-purpose-title">Lưu trữ, hệ thống hoá và giới thiệu quá trình học tập một cách khoa học.</h2>
+<p>Mục tiêu của Portfolio là lưu trữ, hệ thống hóa và giới thiệu những sản phẩm, bài tập, dự án cùng các kỹ năng số mà mình đã tích lũy trong suốt học phần. Đây không chỉ là nơi ghi lại quá trình học tập và phát triển của bản thân, mà còn giúp mình theo dõi sự tiến bộ qua từng giai đoạn, nhận ra những điểm mạnh và những kỹ năng cần tiếp tục hoàn thiện.</p>
+<p>Portfolio đồng thời là minh chứng cho năng lực học tập, khả năng ứng dụng công nghệ số và tinh thần chủ động học hỏi. Thông qua website, mình có thể chia sẻ các thành quả đã đạt được theo cách rõ ràng, chuyên nghiệp và thuận tiện, đồng thời tạo nền tảng phục vụ cho việc học tập và công việc trong tương lai.</p>
 </div>
 </section>
 <section class="project-archive" id="projects">
@@ -193,11 +207,7 @@
 <section class="summary-section" id="summary">
 <div class="summary-grid">
 <div class="summary-kicker"><p class="mn">Tổng kết</p><h1>Hồ sơ năng lực đang tiếp tục phát triển</h1><a class="source-badge" href="#projects">Xem lại 6 bài tập</a></div>
-<div class="summary-copy">
-<article class="summary-card"><h3>Từ bài tập thành một hệ thống học tập</h3><p>Quá trình xây dựng portfolio giúp mình nhìn lại toàn bộ kiến thức và kỹ năng đã rèn luyện trong học phần. Khi sắp xếp sản phẩm theo từng chủ đề, mình hiểu rõ hơn mình đã học được gì và cần tiếp tục cải thiện ở đâu.</p></article>
-<article class="summary-card"><h3>Công cụ chỉ phát huy giá trị khi được sử dụng có mục đích</h3><p>Canva, Google Drive, Microsoft Office, các nền tảng họp trực tuyến và công cụ AI đều giúp tiết kiệm thời gian. Tuy nhiên, mình nhận ra người học vẫn phải chủ động kiểm tra, chỉnh sửa và chịu trách nhiệm với sản phẩm cuối cùng.</p></article>
-<article class="summary-card"><h3>Giá trị lâu dài của portfolio</h3><p>Điều mình tâm đắc nhất là portfolio không chỉ là bài nộp của học phần mà còn là nơi lưu giữ thành quả học tập. Mình có thể tiếp tục cập nhật tài liệu trong những năm sau và sử dụng khi ứng tuyển học bổng, thực tập hoặc công việc.</p><p>Dự án cũng giúp mình tự tin hơn trong việc tổ chức nội dung, trình bày thông tin và xây dựng hồ sơ học tập trong môi trường số.</p></article>
-</div>
+<div class="summary-copy"><article class="summary-card"><h3>Một trải nghiệm giúp mình nhìn lại quá trình học tập</h3><p>Quá trình xây dựng Portfolio là một trải nghiệm rất ý nghĩa đối với mình. Ban đầu, mình nghĩ đây chỉ là việc tổng hợp các bài tập đã hoàn thành, nhưng trong khi thực hiện, mình nhận ra Portfolio còn giúp hệ thống hóa toàn bộ kiến thức, nhìn lại quá trình học tập và đánh giá sự tiến bộ của bản thân.</p><p>Thông qua việc sắp xếp các sản phẩm theo từng chủ đề, mình hiểu rõ hơn những gì mình đã học và những kỹ năng đã rèn luyện trong suốt học phần.</p></article><article class="summary-card"><h3>Những kiến thức và kỹ năng đã tích luỹ</h3><p>Qua dự án này, mình học được nhiều kiến thức và kỹ năng quan trọng. Mình sử dụng các công cụ số như Canva, Notion, Google Drive, CapCut và Microsoft Office để thiết kế, lưu trữ và trình bày nội dung.</p><p>Bên cạnh đó, mình nâng cao kỹ năng tìm kiếm và đánh giá thông tin, quản lý dữ liệu, giao tiếp qua email, làm việc nhóm trực tuyến, quản lý dự án và ứng dụng trí tuệ nhân tạo một cách có trách nhiệm trong học tập. Mình cũng cải thiện khả năng lập kế hoạch, quản lý thời gian và trình bày thông tin khoa học, rõ ràng.</p></article><article class="summary-card"><h3>Điều mình tâm đắc nhất</h3><p>Portfolio không chỉ là một bài tập của học phần mà còn là một “hồ sơ năng lực” giúp mình lưu giữ những sản phẩm và thành quả học tập. Đây sẽ là nguồn tài liệu hữu ích để mình tiếp tục bổ sung trong những năm học tiếp theo, đồng thời có thể sử dụng khi ứng tuyển học bổng, thực tập hoặc việc làm sau này.</p></article><article class="summary-card"><h3>Khó khăn và cách mình khắc phục</h3><p>Trong quá trình thực hiện, mình gặp khó khăn khi phải quản lý nhiều tài liệu khác nhau, lựa chọn nội dung phù hợp để đưa vào Portfolio và duy trì bố cục trình bày thống nhất, đẹp mắt. Việc làm quen với một số công cụ số mới cũng khiến mình mất khá nhiều thời gian.</p><p>Tuy nhiên, nhờ chủ động tìm hiểu, tham khảo tài liệu và luyện tập thường xuyên, mình đã từng bước khắc phục những khó khăn đó và hoàn thành Portfolio theo đúng kế hoạch.</p></article><article class="summary-card"><h3>Giá trị lâu dài của dự án</h3><p>Nhìn chung, dự án Portfolio không chỉ giúp mình củng cố kiến thức của học phần mà còn rèn luyện tư duy tổ chức, khả năng ứng dụng công nghệ số và tinh thần học tập chủ động.</p><p>Đây là một trải nghiệm bổ ích, giúp mình tự tin hơn trong việc xây dựng hồ sơ học tập và chuẩn bị cho định hướng nghề nghiệp trong tương lai.</p></article></div>
 </div>
 </section>
 <section class="contact-cta">
@@ -208,7 +218,7 @@
 <div class="footer-container">
 <div class="footer-header"><h1>Nguyễn Ngọc Bảo Hoà</h1></div>
 <div class="footer-row">
-<div class="footer-col"><p>Khám phá</p><p><a href="./index.html">Trang chủ</a></p><p><a href="#projects">Dự án</a></p><p><a href="./contact.html">Liên hệ</a></p></div>
+<div class="footer-col"><p>Khám phá</p><p><a href="#top">Trang chủ</a></p><p><a href="#projects">Dự án</a></p><p><a href="./contact.html">Liên hệ</a></p></div>
 <div class="footer-col"><p>Hồ sơ</p><p>MSSV 25041644</p><p>Lớp 25C9</p><p>Ngôn ngữ Trung Quốc</p></div>
 <div class="footer-col"><p>Chủ đề</p><p>Ngôn ngữ</p><p>Du lịch</p><p>Điện ảnh</p><p>Công nghệ số</p></div>
 <div class="footer-col"><p>Bài tập</p><p><a href="#projects">Danh sách 6 bài</a></p><p><a href="#summary">Tổng kết</a></p></div>

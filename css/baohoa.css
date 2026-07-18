@@ -747,3 +747,87 @@ footer .explosion-particle-img {
   .home-project-image { min-height: 330px; aspect-ratio: auto; }
   .text-project-preview { min-height: 320px; }
 }
+
+
+/* =========================================================
+   V9 — reliable menu scrolling + complete profile content
+   ========================================================= */
+html.menu-scroll-locked,
+body.menu-scroll-locked {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+body.menu-scroll-locked {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  width: auto !important;
+}
+#top, #about, #projects, #summary { scroll-margin-top: 78px; }
+
+.about-copy .about-copy-content {
+  width: min(980px, 72%) !important;
+  padding: clamp(1.6rem, 4vw, 3.2rem) !important;
+}
+.about-copy .about-copy-content h3 {
+  max-width: 20ch;
+  margin-bottom: 1.4rem;
+}
+.long-form-copy {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+.long-form-copy p {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(32,49,44,.42);
+  font-size: .98rem;
+  line-height: 1.75;
+}
+.portfolio-purpose {
+  padding: clamp(6rem, 10vw, 10rem) 2rem;
+  display: grid;
+  grid-template-columns: minmax(190px, .42fr) minmax(0, 1fr);
+  gap: clamp(2rem, 7vw, 8rem);
+  background: var(--accent2);
+  border-top: 2px solid var(--fg);
+  border-bottom: 2px solid var(--fg);
+}
+.portfolio-purpose-index {
+  align-self: start;
+  position: sticky;
+  top: 7rem;
+}
+.portfolio-purpose-index span {
+  display: block;
+  margin-top: 1rem;
+  font: 800 clamp(5rem, 11vw, 11rem)/.8 var(--font-display);
+  letter-spacing: -.08em;
+}
+.portfolio-purpose-copy {
+  max-width: 900px;
+}
+.portfolio-purpose-copy h2 {
+  font-size: clamp(2.6rem, 5.2vw, 5.6rem);
+  margin-bottom: 2rem;
+  max-width: 13ch;
+}
+.portfolio-purpose-copy p {
+  max-width: 72ch;
+  font-size: 1.03rem;
+  line-height: 1.78;
+}
+.portfolio-purpose-copy p + p { margin-top: 1.1rem; }
+.summary-copy { gap: 2.5rem !important; }
+.summary-card p { line-height: 1.75; }
+.summary-card h3 { max-width: 19ch; }
+
+@media (max-width: 980px) {
+  .long-form-copy { grid-template-columns: 1fr; }
+  .about-copy .about-copy-content { width: 100% !important; }
+  .portfolio-purpose { grid-template-columns: 1fr; padding-inline: 1rem; }
+  .portfolio-purpose-index { position: static; display: flex; align-items: end; justify-content: space-between; }
+  .portfolio-purpose-index span { font-size: 5rem; margin: 0; }
+}
