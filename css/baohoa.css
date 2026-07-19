@@ -842,3 +842,238 @@ body.menu-scroll-locked {
   scroll-margin-top: 18px;
   pointer-events: none;
 }
+
+
+/* =========================================================
+   V11 — pink editorial palette + collision-safe responsive layout
+   Keeps GSAP/Lenis motion, but every animated object owns its cell.
+   ========================================================= */
+body {
+  background:
+    radial-gradient(circle at 14% 10%, rgba(243, 198, 208, .42), transparent 30rem),
+    radial-gradient(circle at 88% 26%, rgba(233, 145, 163, .18), transparent 34rem),
+    var(--bg);
+}
+
+/* Hero is normal-flow first; animation only changes opacity/transform. */
+.hero {
+  min-height: 100dvh !important;
+  padding: clamp(7.5rem, 10vh, 9rem) clamp(1.25rem, 4vw, 4rem) 5.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: clamp(1.2rem, 2.5vh, 2.2rem) !important;
+  background:
+    radial-gradient(circle at 76% 32%, rgba(233, 182, 194, .55), transparent 26rem),
+    var(--bg) !important;
+  overflow: clip !important;
+}
+.hero-kicker {
+  position: relative !important;
+  inset: auto !important;
+  align-self: flex-start !important;
+  width: min(33rem, 48vw) !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  z-index: 5 !important;
+  border-left-color: var(--accent1) !important;
+}
+.hero-stamp {
+  top: clamp(6.5rem, 9vh, 8rem) !important;
+  right: clamp(1.25rem, 4vw, 4rem) !important;
+  border-color: var(--accent1) !important;
+  color: var(--accent1) !important;
+}
+.hero .hero-header-wrapper {
+  width: min(1120px, 92vw) !important;
+  margin: 0 auto !important;
+  gap: .1rem !important;
+  overflow: visible !important;
+}
+.hero .hero-header,
+.hero .hero-header.hero-header-1,
+.hero .hero-header.hero-header-2 {
+  width: 100% !important;
+  transform: none !important;
+  overflow: visible !important;
+}
+.hero .hero-header h1 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: .06em .04em .12em !important;
+  font-size: clamp(3.75rem, 7.1vw, 7.4rem) !important;
+  line-height: 1.01 !important;
+  letter-spacing: -.052em !important;
+  white-space: nowrap !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+.hero .hero-footer {
+  padding-inline: clamp(1.25rem, 4vw, 4rem) !important;
+}
+
+/* Document card remains animated in a dedicated stage, never over copy. */
+.hero-img-holder {
+  background:
+    linear-gradient(180deg, var(--paper), #fcebf0) !important;
+}
+.hero-img-holder .hero-img {
+  width: min(590px, 72vw) !important;
+  box-shadow: 14px 14px 0 rgba(199, 143, 164, .46) !important;
+  border-color: var(--fg) !important;
+}
+
+/* About is a fixed grid at laptop widths; no absolute portrait over text. */
+.about-hero {
+  min-height: auto !important;
+  padding: clamp(7rem, 9vw, 9.5rem) clamp(1.5rem, 5vw, 5rem) !important;
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 310px) !important;
+  grid-template-areas: "heading portrait" "bio portrait" !important;
+  gap: 2rem clamp(2.5rem, 5vw, 5rem) !important;
+  align-items: center !important;
+  overflow: clip !important;
+  background:
+    radial-gradient(circle at 80% 35%, rgba(243, 198, 208, .48), transparent 25rem),
+    var(--paper) !important;
+}
+.about-hero .about-hero-header {
+  min-width: 0;
+  align-self: end !important;
+}
+.about-hero .about-hero-header h1 {
+  font-size: clamp(3rem, 5.15vw, 5.55rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.045em !important;
+  white-space: normal !important;
+}
+.about-hero .about-hero-bio {
+  min-width: 0;
+  max-width: 690px !important;
+  padding-right: 0 !important;
+}
+.about-hero .about-hero-bio p.ss {
+  font-size: clamp(.95rem, 1.25vw, 1.1rem) !important;
+  line-height: 1.72 !important;
+}
+.about-hero .about-hero-portrait {
+  max-width: 300px !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 5 !important;
+  box-shadow: 11px 11px 0 var(--accent1) !important;
+  outline-color: var(--accent2) !important;
+  transform-origin: center center;
+}
+
+/* Pink material system across content cards. */
+.about-copy .about-copy-content {
+  background: linear-gradient(145deg, #eab4c0, #f2ccd4) !important;
+  box-shadow: 14px 14px 0 var(--fg) !important;
+}
+.stats .stats-item-1 { background: #f0b7c3 !important; }
+.stats .stats-item-2 { background: #f6cfd7 !important; }
+.stats .stats-item-3 { background: #5a3443 !important; }
+.portfolio-purpose { background: #f4c6d0 !important; }
+.project-archive,
+.summary-section,
+.services-header { background: var(--paper) !important; }
+.home-project-image { background: #f9e8ec !important; }
+.text-project-preview {
+  background: linear-gradient(145deg, rgba(233,145,163,.26), rgba(255,250,251,.96)) !important;
+}
+.text-project-preview.ai-preview {
+  background: linear-gradient(145deg, rgba(199,143,164,.30), rgba(255,250,251,.96)) !important;
+}
+.services #service-card-1 .service-card-inner { background: #e991a3 !important; }
+.services #service-card-2 .service-card-inner { background: #f3c6d0 !important; }
+.services #service-card-3 .service-card-inner { background: #e9b6c2 !important; }
+.services #service-card-4 .service-card-inner { background: #4b2e3a !important; }
+.nav-overlay {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(255,250,251,.62), transparent 30%),
+    #e9b6c2 !important;
+}
+.contact-cta .contact-button {
+  background: linear-gradient(45deg, #e991a3, #f3c6d0, #e9b6c2, #c78fa4) !important;
+}
+
+/* Keep decorative tags outside the reading column. */
+.about-copy #tag-1 { top: 18%; left: 7%; }
+.about-copy #tag-2 { top: 73%; left: 8%; }
+.about-copy #tag-3 { top: 18%; left: 91%; }
+.about-copy #tag-4 { top: 70%; left: 91%; }
+.about-copy #tag-5 { top: 93%; left: 52%; }
+.about-copy .tag { opacity: .52 !important; }
+
+/* Prevent text clipping in every oversized editorial heading. */
+.project-archive-header h1,
+.services-header .services-header-title h1,
+.services .service-card-content h1,
+.summary-kicker h1,
+footer .footer-header h1 {
+  overflow: visible !important;
+  padding: .04em .04em .14em !important;
+  line-height: 1.02 !important;
+  word-break: normal !important;
+}
+.project-archive-header h1 { font-size: clamp(3.2rem, 6.2vw, 6.7rem) !important; }
+.services-header .services-header-title h1 { font-size: clamp(2.7rem, 5.8vw, 6rem) !important; }
+.summary-kicker h1 { font-size: clamp(3rem, 5.6vw, 5.8rem) !important; }
+footer .footer-header h1 { font-size: clamp(3.4rem, 8vw, 8.5rem) !important; }
+
+@media (max-width: 1180px) {
+  .hero .hero-header h1 {
+    font-size: clamp(3.55rem, 7.7vw, 6.2rem) !important;
+  }
+  .about-hero {
+    grid-template-columns: minmax(0, 1fr) 260px !important;
+  }
+  .about-hero .about-hero-header h1 {
+    font-size: clamp(2.8rem, 5.6vw, 4.8rem) !important;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    min-height: 100svh !important;
+    justify-content: flex-start !important;
+    padding-top: 7.2rem !important;
+  }
+  .hero-kicker {
+    width: 100% !important;
+    align-self: stretch !important;
+  }
+  .hero .hero-header-wrapper { width: 100% !important; }
+  .hero .hero-header h1 {
+    font-size: clamp(3rem, 12vw, 5.5rem) !important;
+    white-space: normal !important;
+    text-align: left !important;
+    letter-spacing: -.045em !important;
+  }
+  .hero .hero-footer .hero-footer-scroll-down {
+    left: 1.25rem !important;
+    transform: none !important;
+  }
+  .about-hero {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "heading" "portrait" "bio" !important;
+    text-align: left !important;
+  }
+  .about-hero .about-hero-header,
+  .about-hero .about-hero-bio {
+    text-align: left !important;
+    justify-self: stretch !important;
+  }
+  .about-hero .about-hero-portrait {
+    justify-self: start !important;
+    max-width: 250px !important;
+  }
+  .about-copy .tag { display: none !important; }
+}
+
+@media (max-width: 520px) {
+  .hero .hero-header h1 { font-size: clamp(2.75rem, 14.5vw, 4.6rem) !important; }
+  .hero-footer-symbols { display: none !important; }
+  .about-hero .about-hero-header h1 { font-size: clamp(2.7rem, 13vw, 4.2rem) !important; }
+}

@@ -1,13 +1,13 @@
 :root {
-  --bg: #f4efe5;
-  --bg2: #e6ded0;
-  --fg: #20312c;
-  --accent1: #d77e70;
-  --accent2: #e4c978;
-  --accent3: #9db8ad;
-  --accent4: #8295ad;
-  --paper: #fbf8f1;
-  --line: rgba(32, 49, 44, 0.18);
+  --bg: #fff5f7;
+  --bg2: #f7e3e8;
+  --fg: #3b2730;
+  --accent1: #e991a3;
+  --accent2: #f3c6d0;
+  --accent3: #e9b6c2;
+  --accent4: #c78fa4;
+  --paper: #fffafb;
+  --line: rgba(59, 39, 48, 0.18);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }

@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (heroCard && holder) {
     gsap.fromTo(heroCard,
-      { y: -70, scale: .84, rotation: -6, opacity: .25 },
+      { y: -38, scale: .9, rotation: -4, opacity: .35 },
       {
         y: 0, scale: 1, rotation: 2, opacity: 1, ease: "none",
         scrollTrigger: { trigger: holder, start: "top 90%", end: "center 50%", scrub: .75 },
       }
     );
     gsap.to(heroCard, {
-      y: 36, rotation: -2, ease: "none",
+      y: 18, rotation: -1.5, ease: "none",
       scrollTrigger: { trigger: holder, start: "center 50%", end: "bottom 15%", scrub: .75 },
     });
   }

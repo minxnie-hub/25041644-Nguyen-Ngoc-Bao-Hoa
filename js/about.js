@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
       { opacity: 1, y: 0, rotation: 2, scale: 1, duration: .9, ease: "power3.out", scrollTrigger: { trigger: ".about-hero", start: "top 72%", once: true } }
     );
     gsap.to(".about-hero-portrait", {
-      y: -38, rotation: -3, ease: "none",
+      y: -18, rotation: -2, ease: "none",
       scrollTrigger: { trigger: ".about-hero", start: "top 20%", end: "bottom 20%", scrub: .8 },
     });
 
